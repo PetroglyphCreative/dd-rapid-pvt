@@ -121,7 +121,7 @@ var thing = new Vue({
 			let newmenu_cpos= (elem.offsetWidth /2) + elem.offsetLeft; // center of the button half the width of the button plus its distance from the left side
 			//console.log(newmenu_cpos);
 			//console.log('offsetwiddth: '+document.getElementById("menubox").offsetWidth);
-			let width = document.getElementById("menubox").offsetWidth > 0 ? document.getElementById("menubox").offsetWidth : 340; //width of the menu itself
+			let width = document.getElementById("menubox").offsetWidth > 0 ? document.getElementById("menubox").offsetWidth : 170; //width of the menu itself
 			//console.log('width var: '+ width);
 			//console.log('ofsl: '+document.getElementById("menuroot").offsetLeft);
 			let newmenu_lpos=  newmenu_cpos - (document.getElementById("menuroot").offsetLeft) - (width /2); //- (document.getElementById("menuroot").offsetWidth)
