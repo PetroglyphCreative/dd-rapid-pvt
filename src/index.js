@@ -5,6 +5,7 @@ import img1 from './assets/img/agriculture.jpg';
 import img2 from './assets/img/lone-peak-hospital.jpg';
 import img3 from './assets/img/person-image.jpg';
 import logo from './assets/img/rapidfire-logo.png';
+import img4 from './assets/img/banner.jpg'
 
 function component() {
   const element = document.createElement('div');

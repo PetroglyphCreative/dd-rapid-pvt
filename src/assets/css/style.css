@@ -47,6 +47,30 @@ hr {border-width:0;}
 th{
   @apply bg-gray-100 text-gray-300 font-bold py-2  text-left;
 }
+.banner-home {
+  background-image: url('../img/banner.jpg');
+  background-position: 1% 1%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  min-height: 630px;
+}
+.banner-box {
+  opacity: 0.93;
+  max-width: 718px;
+  width: 100%;
+  padding: 2.5rem 2.5rem 2.5rem 0;
+}
+.banner-text{
+  max-width: 330px;
+  width: 100%;
+  padding-right: 3rem;
+}
+.banner-text .fa-angle-right:before{
+  position: relative;
+  top: .045em;
+  padding-left: .5em;
+  font-size: 18px;
+}
 .fa.fa-angle-down {
   font-size: 18px;
 }
@@ -100,8 +124,9 @@ th{
 }
 .heading-m{
 	font-size:32px;
-	line-height:56px;
-	font-weight:700;
+	line-height:32px;
+  letter-spacing:1.24pt;
+	font-weight:600;
 	@apply font-display;
 }
 .heading-l{
