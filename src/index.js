@@ -6,6 +6,9 @@ import img2 from './assets/img/lone-peak-hospital.jpg';
 import img3 from './assets/img/person-image.jpg';
 import logo from './assets/img/rapidfire-logo.png';
 import img4 from './assets/img/banner.jpg'
+import mark from './assets/img/rapidfire-mark.png';
+import img5 from './assets/img/stadium.jpg';
+import cta from './assets/img/cta-image.png';
 
 function component() {
   const element = document.createElement('div');

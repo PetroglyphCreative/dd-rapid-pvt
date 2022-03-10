@@ -56,6 +56,10 @@ module.exports = {
 	    filename: 'index.html',
       template: 'src/index.html'
     }),
+    new HtmlWebpackPlugin({
+	    filename: 'design-elements.html',
+      template: 'src/design-elements.html'
+    }),
   ],
   output: {
 	  filename:'[name].js',
