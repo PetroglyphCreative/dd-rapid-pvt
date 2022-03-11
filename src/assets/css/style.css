@@ -111,7 +111,9 @@ th{
 }
 .text-normal{
 	font-size:16px;
+  letter-spacing: .1pt;
 	line-height:24px;
+  font-weight: 400;
 	@apply font-body;
 }
 .text-medium{
@@ -124,9 +126,24 @@ th{
 	line-height:32px;
 	@apply font-body;
 }
+.arrow-links {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .6pt;
+  font-weight: 600;
+  @apply font-display;
+}
+.phone-text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .5pt;
+  font-weight: 600;
+  @apply font-body mb-4;
+}
 .heading-xxs{
 	font-size:18px;
-	line-height:32px;
+	line-height:20px;
+  letter-spacing: .6pt;
 	font-weight:500;
 	@apply font-display;
 }
@@ -139,7 +156,7 @@ th{
 .heading-s{
 	font-size:24px;
 	line-height:26px;
-  letter-spacing: 1.1pt;
+  letter-spacing: .1pt;
 	font-weight:600;
 	@apply font-display;
 }
@@ -149,23 +166,24 @@ th{
 	font-weight:600;
 	@apply font-display;
 }
-.heading-m{
+.page-heading{
 	font-size:32px;
 	line-height:32px;
-  letter-spacing:1.24pt;
+  letter-spacing:.24pt;
 	font-weight:600;
 	@apply font-display;
 }
-.heading-l{
-	font-size:36px;
-	line-height:64px;
+.section-heading{
+	font-size:32px;
+	line-height:32px;
+  letter-spacing: .20pt;
 	font-weight:600;
 	@apply font-display;
 }
-.heading-xl{
+.cta-heading{
 	font-size:40px;
 	line-height:46px;
-  letter-spacing: 1.24pt;
+  letter-spacing: .24pt;
 	font-weight:600;
 	@apply font-display;
 }
@@ -212,6 +230,32 @@ button:hover{
 button.btn-lg{
 	@apply py-4 px-10 text-large;
 }
+.totop {
+  position: fixed;
+  bottom: 60px;
+  right: 15%;
+  z-index: 100;
+}
+.totop .fa-chevron-up {
+  font-size: 20px;
+  margin-left: -3px;
+}
+.btn-totop {
+  background-color: #fff;
+  transition: background-color .25s ease-out,color .25s ease-out;
+  width: 58px;
+  height: 58px;
+  padding: 16px 0 10px 3px;
+  border-radius: 50%;
+  color: #2d2d2d;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 16%);
+  line-height: 1;
+  border: 1px solid transparent;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 1rem 0;
+}
 .btn-cta{
   border-width: 1px;
 	@apply font-display font-semibold py-2 px-4 bg-blue-500 text-white border-white;
@@ -244,8 +288,8 @@ button.btn-lg{
 .job-btn p {
   margin: 0;
 }
-a.job-btn:first-of-type {
-  margin-right: 50px;
+.job-container a {
+  margin-bottom: 1rem;
 }
 .breadcrumb{
   font-size:12px;
@@ -331,21 +375,15 @@ p.toobig{ min-width:91px;}
  @apply  max-w-2xl mr-auto ml-auto my-4 text-large;
 }
 .read h1 {@apply heading-dxl text-orange-600}
-.read h2 {@apply heading-l text-green-500 my-8;}
+.read h2 {@apply section-heading text-green-500 my-8;}
 .read.home h2 {@apply text-orange-500;}
-.read h3{@apply heading-m text-gray-400 my-8;}
+.read h3{@apply page-heading text-gray-400 my-8;}
 .read h4 {@apply heading-s text-gray-700  my-8;}
 .read h5 {@apply heading-xs text-gray-700  my-8;}
 .read figure { @apply ml-auto mr-auto my-8;}
 .read ul {
    @apply  max-w-xl mr-auto ml-auto my-4 text-large leading-snug list-disc ;
    max-width:620px;
-}
-.read footer h4 {
-	@apply text-green-100;
-}
-.read footer ul {
-	@apply list-none text-large;
 }
 .read blockquote p{
   @apply font-body italic;
@@ -478,10 +516,28 @@ a.skip-main:focus, a.skip-main:active {
   font-variant: normal;
   line-height: 1;
   text-rendering: auto;
-  @apply text-gray-500;
 }
 .phone:before{
   content:"\f879";
+}
+.social .fa, .social .fab {
+  font-size: 40px;
+  margin-right: 1.0rem;
+  margin-top: 1.0rem;
+}
+.social .fa-linkedin-in {
+  position: relative;
+  top: 5px;
+}
+.states i.fa-angle-right {
+  margin-left: .65rem;
+  font-size: 18px;
+}
+.states i.phone {
+  font-size: 20px;
+  position: relative;
+  top: 4px;
+  margin-right: .25rem;
 }
 .card {
 	@apply max-w-sm overflow-hidden mr-auto ml-auto mb-8;
@@ -522,13 +578,37 @@ blockquote footer{
 blockquote footer a{
  @apply not-italic;	
 }
+footer p {
+  margin: 0;
+}
+footer a {
+  @apply text-white;
+}
+footer li {
+  @apply mb-4;
+}
+footer li a {
+  font-weight: 400;
+}
+.copyright {
+  @apply font-body text-white;
+}
+.copyright a{
+  font-weight: 400;
+  text-decoration: underline;
+}
 /* custom media queries - uncomment & add to as needed */
 @media (max-width:375px) {
   .mark {
     background-image: none;
   }
 }
-
+@media (max-width:428px) {
+  .cta-heading{
+    font-size:36px;
+    line-height:40px;
+  }
+}
 /*
 @media (min-width:640px) {
   .sm\:.thing{}
@@ -542,6 +622,9 @@ blockquote footer a{
   .mark {
     background-position: 90% 85%;
   }
+  .job-btn {
+    min-width: 432px;
+  }
 } 
 @media (min-width:1024px) {
   .card-title {
@@ -553,14 +636,14 @@ blockquote footer a{
   .mark {
     background-position: 98% 97%;
   }
+  .job-container a:first-of-type {
+    margin-right: 50px;
+  }
 }
 /* because tablets */
 @media (min-width:1025px) {
   .mark {
     background-position: 40px;
-  }
-  .mark ul li {
-    margin-bottom: 0;
   }
   .cta-image {
     background-image: url('../img/cta-image.png');
@@ -583,3 +666,16 @@ blockquote footer a{
   .xxxl\:.thing{}
 }
 */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .container-main {
+      max-width: 100vw;
+    }
+    .totop {
+      bottom: 2%;
+      right: 6%;
+    }
+
+}
