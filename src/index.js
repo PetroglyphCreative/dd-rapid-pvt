@@ -61,7 +61,7 @@ var thing = new Vue({
 	   menu_lpos: 0,
 	   menu_cpos: 0,
 	   menudisplay:'none', //CSS switch from none to block for menu container
-	   mobile: window.innerWidth >767 ? false: true,
+	   mobile: window.innerWidth >835 ? false: true,
 		 
 	  // boardstyles: {
 	//	'left': '0',
@@ -95,7 +95,7 @@ var thing = new Vue({
 			this.display.three= 'none';
 		},
 		openmenu: function (event) { //grabs which menu and opens it from closed
-			this.mobile = window.innerWidth >767 ? false: true;
+			this.mobile = window.innerWidth >835 ? false: true;
 			let targetmenu = event.target.getAttribute('data-menu');
 			
 			this.showing = true;
