@@ -9,6 +9,17 @@ import img4 from './assets/img/banner.jpg'
 import mark from './assets/img/rapidfire-mark.png';
 import img5 from './assets/img/stadium.jpg';
 import cta from './assets/img/cta-image.png';
+import img6 from './assets/img/detail-banner.jpg';
+import img7 from './assets/img/location-banner.jpg';
+import img8 from './assets/img/fire-suppression.jpg';
+import quote from './assets/img/quotes.svg';
+import img01 from './assets/img/img_01.jpg';
+import img02 from './assets/img/img_02.jpg';
+import img03 from './assets/img/img_03.jpg';
+import img04 from './assets/img/img_04.jpg';
+import img05 from './assets/img/img_05.jpg';
+import img06 from './assets/img/img_06.jpg';
+import big_img01 from './assets/img/big_img_01.jpg';
 
 function component() {
   const element = document.createElement('div');
