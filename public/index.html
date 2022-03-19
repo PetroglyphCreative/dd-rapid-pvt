@@ -14,7 +14,7 @@
 
 	<!-- Header with Nav menu section -->
 	<header class="lg:px-2 px-1 border-b-8 border-green-500 bg-white flex flex-wrap items-center py-3 " id='pagehead'>
-			<div class="container ml-auto mr-auto px-2">
+			<div class="container-main ml-auto mr-auto px-2">
 					<nav class="block pt-2">
 						<ul class="block lg:flex lg:flex-wrap xl:flex-no-wrap  xl:items-stretch xl:justify-between ">
 							<li class="flex text-center lg:text-left w-full lg:w-1/2 xl:w-1/3 justify-between" >
@@ -274,12 +274,12 @@
 
 	<div class="flex flex-col mb-4">
 		<div class="w-full bg-green-500">
-			<div class="container-main ml-4 xl:ml-auto xl:mr-auto my-4">
+			<div class="ml-4 xl:ml-auto xl:mr-auto my-4">
 				<p><span class="breadcrumb">Industries | <span class="active">Healthcare</span></span></p>
 			</div>
 		</div>
 		<div class="w-full detail-banner py-12">
-			<div class="container-main ml-4 xl:ml-auto xl:mr-auto my-8"><h1 class="font-display section-heading text-white">Fire Protection Systems & Services</h1></div>
+			<div class="ml-4 xl:ml-auto xl:mr-auto my-8"><h1 class="font-display section-heading text-white">Fire Protection Systems & Services</h1></div>
 		</div>
 	</div>
 
@@ -500,8 +500,9 @@
 	</div>
 
 	<!-- timeline section -->
+	<!-- NOTE: the class 'image' in this particular case is *only* to pull in a placeholder! It can be dropped from production files or replaced.-->
 	<div class="flex mb-4">
-		<div class="container-main mx-5 sm:w-full lg:mr-auto lg:ml-auto">
+		<div class="container-gallery mx-5 sm:w-full lg:mr-auto lg:ml-auto">
 			<ul class="timeline timeline-centered">
 				<li class="timeline-item">
 					<div class="timeline-marker"></div>
@@ -511,7 +512,7 @@
 						</div>
 						<h3 class="timeline-title">Rapid Fire Protection, Inc. founded</h3>
 						<p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis eu pede mollis pretium. Pellentesque ut neque.</p>
-						<div class="image"></div>
+						<img src="" alt="" class="image">
 					</div>
 				</li>
 				<li class="timeline-item">
@@ -540,6 +541,7 @@
 						</div>
 						<h3 class="timeline-title">Event Title</h3>
 						<p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis eu pede mollis pretium. Pellentesque ut neque. </p>
+						<img src="" alt="" class="image">
 					</div>
 				</li>
 				<li class="timeline-item">
@@ -553,11 +555,366 @@
 					</div>
 				</li>
 			</ul>
-			<div class="w-full read mb-8">
+			<div class="w-5/6 read mb-8">
 				<h4>Acquisition Opportunities</h4>
 				<p>Interested in joining us? We are seeking leading fire protection services organizations to expand our team and grow our national presence. Learn how you can accelerate your growth goals.</p>
-				<a href="" class="btn-cta uppercase mt-4">Learn About Acquisitions</a>
+				<a href="" class="btn-cta uppercase my-4">Learn About Acquisitions</a>
 			</div>
+		</div>
+	</div>
+
+	<!-- people cards -->
+	<!-- NOTE: the class 'image2' in this particular case is *only* to pull in a placeholder! It can be dropped from production files or replaced.-->
+	<div class="flex flex-col mb-4">
+		<div class="w-full container-main lg:mr-auto lg:ml-auto flex flex-col-reverse items-center xl:flex-row xl:justify-between">
+			<div class="w-2/3 mb-12">
+				<h2 class="heading-xxs mb-4 text-blue-500 uppercase">Always Safe, Always Prepared</h2>
+				<p>We protect what matters to you; people, property and business assets. Rapid Fire Protection is a full-service fire suppression systems contractor specializing in design, installation, and service of fire alarm systems, automatic fire sprinkler systems, and fire protection systems for the commercial, industrial and residential market.</p>
+				<p>We are proud to offer fire protection systems and services across the nation as well as internationally. With projects completed in more than half of the U.S. and over 25 years of experience, we have the team and expertise to provide you with the solution that best fits your needs.</p>
+				<p>Headquartered in South Dakota, with offices in North Dakota, Colorado, Utah, and Wyoming, we strive to consistently deliver exceptional value to our customers.</p>
+			</div>
+			<div class="figPeople flex flex-row mb-12 xl:justify-end">
+				<figure class="xl:ml-4">
+					<img src="" alt="" class="image2">
+					<figcaption>The December 2019 annual training was an opportunity for our team to come 
+						together, look back at the wins for the past year and reflect on strategy and 
+						future goals we aspire to reach.</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="mx-4 xl:mr-auto xl:ml-auto">
+			<h2 class="heading-xxs text-blue-500 uppercase">Hardcoded Section Heading</h2>
+			<div class="w-full lg:mr-auto lg:ml-auto md:grid md:grid-cols-2 lg:grid-cols-4 md:auto-rows-fr md:gap-6 mt-4">
+				<div class="flex-grab  ml-auto mr-auto">
+					<a href="#">
+						<div class="card">
+							<img src="./assets/img/person-image.jpg" alt="person image">
+							<div class="px-6 py-4 bg-white">
+								<h4 class="">Todd Sweet</h4>
+								<h5>Regional Manager</h5>
+								<div class="mt-2 mb-8">
+									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="flex-grab  ml-auto mr-auto">
+					<a href="#">
+						<div class="card">
+							<img src="./assets/img/person-image.jpg" alt="person image">
+							<div class="px-6 py-4 bg-white">
+								<h4 class="">Todd Sweet</h4>
+								<h5>Regional Manager</h5>
+								<div class="mt-2 mb-8">
+									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="flex-grab  ml-auto mr-auto">
+					<a href="#">
+						<div class="card">
+							<img src="./assets/img/person-image.jpg" alt="person image">
+							<div class="px-6 py-4 bg-white">
+								<h4 class="">Todd Sweet</h4>
+								<h5>Regional Manager</h5>
+								<div class="mt-2 mb-8">
+									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="flex-grab  ml-auto mr-auto">
+					<a href="#">
+						<div class="card">
+							<img src="./assets/img/person-image.jpg" alt="person image">
+							<div class="px-6 py-4 bg-white">
+								<h4 class="">Todd Sweet</h4>
+								<h5>Regional Manager</h5>
+								<div class="mt-2 mb-8">
+									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="flex-grab  ml-auto mr-auto">
+					<a href="#">
+						<div class="card">
+							<img src="./assets/img/person-image.jpg" alt="person image">
+							<div class="px-6 py-4 bg-white">
+								<h4 class="">Todd Sweet</h4>
+								<h5>Regional Manager</h5>
+								<div class="mt-2 mb-8">
+									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="flex-grab  ml-auto mr-auto">
+					<a href="#">
+						<div class="card">
+							<img src="./assets/img/person-image.jpg" alt="person image">
+							<div class="px-6 py-4 bg-white">
+								<h4 class="">Todd Sweet</h4>
+								<h5>Regional Manager</h5>
+								<div class="mt-2 mb-8">
+									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="flex-grab  ml-auto mr-auto">
+					<a href="#">
+						<div class="card">
+							<img src="./assets/img/person-image.jpg" alt="person image">
+							<div class="px-6 py-4 bg-white">
+								<h4 class="">Todd Sweet</h4>
+								<h5>Regional Manager</h5>
+								<div class="mt-2 mb-8">
+									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="flex-grab  ml-auto mr-auto">
+					<a href="#">
+						<div class="card">
+							<img src="./assets/img/person-image.jpg" alt="person image">
+							<div class="px-6 py-4 bg-white">
+								<h4 class="">Todd Sweet</h4>
+								<h5>Regional Manager</h5>
+								<div class="mt-2 mb-8">
+									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Map section -->
+	<div class="flex mb-12">
+		<div class="container-main mr-auto ml-auto mb-12">
+			<img src="https://via.placeholder.com/1290x772/ccc/fff.png" alt="">
+		</div>
+	</div>
+	<div class="flex my-8 bg-white" id="locMap">
+		<div class="container-main mt-12 w-full lg:mr-auto lg:ml-auto">
+			<h3 class="heading-xxs text-blue-500 uppercase mx-4 xl:mx-0">Rapid Fire Protection Offices</h3>
+			<ul class="md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-6 mt-4 mx-4 xl:mx-0 states">
+				<li class="mb-8">
+					<h4 class="heading-s mb-2">South Dakota</h4>
+					<a href="" class="text-blue-500 uppercase arrow-links"><span class="border-b-1 border-blue-500">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+					<p class="mt-2">Rapid City, SD</p>
+					<!-- make sure to wrap an <a href="tel:" with the phone number around the icon & phone numbers -->
+					<p class="phone-text"><i class="phone text-gray-500"></i>(555) 555-1234</p>
+				</li>
+				<li class="mb-8">
+					<h4 class="heading-s mb-2">North Dakota</h4>
+					<a href="" class="text-blue-500 uppercase arrow-links"><span class="border-b-1 border-blue-500">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+					<p class="mt-2">Bismarck, ND</p>
+					<p class="phone-text"><i class="phone text-gray-500"></i>(555) 555-1234</p>
+				</li>
+				<li class="mb-8">
+					<h4 class="heading-s mb-2">Wyoming</h4>
+					<a href="" class="text-blue-500 uppercase arrow-links"><span class="border-b-1 border-blue-500">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+					<p class="mt-2">Casper, WY</p>
+					<p class="phone-text"><i class="phone text-gray-500"></i>(555) 555-1234</p>
+					<p class="mt-2">Cheyenne, WY</p>
+					<p class="phone-text"><i class="phone text-gray-500"></i>(555) 555-1234</p>
+				</li>
+				<li class="mb-8">
+					<h4 class="heading-s mb-2">Colorado</h4>
+					<a href="" class="text-blue-500 uppercase arrow-links"><span class="border-b-1 border-blue-500">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+					<p class="mt-2">Aurora, CO</p>
+					<p class="phone-text"><i class="phone text-gray-500"></i>(555) 555-1234</p>
+				</li>
+				<li class="mb-8">
+					<h4 class="heading-s mb-2">Utah</h4>
+					<a href="" class="text-blue-500 uppercase arrow-links"><span class="border-b-1 border-blue-500">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+					<p class="mt-2">Salt Lake City, UT</p>
+					<p class="phone-text"><i class="phone text-gray-500"></i>(555) 555-1234</p>
+				</li>
+			</ul>
+			<hr class="border-1 border-gray-300 mb-12">
+			<h3 class="heading-xxs text-blue-500 uppercase mx-4 xl:mx-0">Rapid Fire Protection Group Offices</h3>
+			<ul class="md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-6 mt-4 mx-4 xl:mx-0 states">
+				<li class="mb-8">
+					<h4 class="heading-s mb-2">California</h4>
+					<p class="mt-2">Pleasanton, CA</p>
+					<p class="phone-text"><i class="phone text-gray-500"></i>(555) 555-1234</p>
+					<p class="mt-2">Sacramento, CA</p>
+					<p class="phone-text"><i class="phone text-gray-500"></i>(555) 555-1234</p>
+					<p class="mt-2">Benicia, CA</p>
+					<p class="phone-text"><i class="phone text-gray-500"></i>(555) 555-1234</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Location Detail section -->
+	<div class="flex mb-4">
+		<div class="container-main w-full mr-auto ml-auto">
+			<div class="flex flex-col lg:mx-4 xl:mx-0">
+				<div class="sm:w-3/4 lg:w-full md:ml-auto md:mr-auto">
+					<h2 class="heading-s mb-4">Colorado Offices</h2>
+				</div>
+				<div class="sm:w-3/4 lg:w-full md:ml-auto md:mr-auto flex flex-col lg:flex-row">
+					<div class="sm:w-full lg:w-1/4 mt-4 mx-4 xl:mx-0 md:ml-auto md:mr-auto">
+						<h3 class="heading-xxs text-blue-500 uppercase">Aurora Team</h3>
+						<p>1650 Jasper Street, Unit H<br/>
+							Aurora, CO</p>
+						<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone text-gray-500"></i>&nbsp; 720-325-5696</a></span>
+					</div>
+					<div class="sm:w-full lg:w-3/4 md:ml-auto md:mr-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-6 mt-4 mx-4 xl:mx-0">
+						<div class="flex-grab  ml-auto mr-auto">
+							<a href="#">
+								<div class="card">
+									<img src="./assets/img/person-image.jpg" alt="person image">
+									<div class="px-6 py-4 bg-white">
+										<h4 class="">Todd Sweet</h4>
+										<h5>Regional Manager</h5>
+										<div class="mt-2 mb-8">
+											<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+											<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="flex-grab  ml-auto mr-auto">
+							<a href="#">
+								<div class="card">
+									<img src="./assets/img/person-image.jpg" alt="person image">
+									<div class="px-6 py-4 bg-white">
+										<h4 class="">Todd Sweet</h4>
+										<h5>Regional Manager</h5>
+										<div class="mt-2 mb-8">
+											<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+											<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="flex-grab  ml-auto mr-auto">
+							<a href="#">
+								<div class="card">
+									<img src="./assets/img/person-image.jpg" alt="person image">
+									<div class="px-6 py-4 bg-white">
+										<h4 class="">Todd Sweet</h4>
+										<h5>Regional Manager</h5>
+										<div class="mt-2 mb-8">
+											<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+											<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="sm:w-3/4 lg:w-full md:ml-auto md:mr-auto flex flex-col lg:flex-row">
+					<div class="sm:w-full lg:w-1/4 mt-4 mx-4 xl:mx-0 md:ml-auto md:mr-auto">
+						<h3 class="heading-xxs text-blue-500 uppercase">Colorado Springs Team</h3>
+						<p>2395 Briargate Boulevard<br/>
+							Colorado Springs, CO</p>
+						<span class="text-small text-gray-900"><a href="tel:719-534-0548"><i class="phone text-gray-500"></i>&nbsp; 719-534-0548</a></span>
+					</div>
+					<div class="sm:w-full lg:w-3/4 md:ml-auto md:mr-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-6 mt-4 mx-4 xl:mx-0">
+						<div class="flex-grab  ml-auto mr-auto">
+							<a href="#">
+								<div class="card">
+									<img src="./assets/img/person-image.jpg" alt="person image">
+									<div class="px-6 py-4 bg-white">
+										<h4 class="">Todd Sweet</h4>
+										<h5>Regional Manager</h5>
+										<div class="mt-2 mb-8">
+											<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+											<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="flex-grab  ml-auto mr-auto">
+							<a href="#">
+								<div class="card">
+									<img src="./assets/img/person-image02.jpg" alt="person image">
+									<div class="px-6 py-4 bg-white">
+										<h4 class="">Carrie Oakey</h4>
+										<h5>Colorado Sales Manager</h5>
+										<div class="mt-2 mb-8">
+											<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
+											<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Careers section - note that gallery can be obtained from gallery section -->
+	<div class="flex mb-4">
+		<div class="container-main mr-auto ml-auto mt-8">
+			<div class="flex flex-col lg:flex-row md:w-3/5 mr-auto ml-auto">
+				<img src="./assets/img/person-image02.jpg" alt="person">
+				<div class="mr-auto ml-auto w-full md:w-2/3 xl:w-1/2 read">
+					<img src="/assets/img/quotes.svg" alt="green quotation mark"  width="30px">
+					<blockquote class="mx-4 lg:mx-0">
+						<p>Our most valuable assets are our people. We are so grateful for the company culture that fosters growth and development. Pellentesque faucibus nisi in urna vulputate RFP. Nam id mauris non erat congue sagittis.</p>
+					</blockquote>
+					<p class="mx-4 lg:mx-0 quote">Jen Peterson <br/><span class="uppercase">HR - Rapid Fire Protection, Inc.</span></p>
+				</div>
+			</div>
+			<div class="md:ml-auto md:mr-auto md:w-2/3 flex flex-col items-center justify-center text-center my-10 sm:py-6">
+				<h3 class="page-heading uppercase">Join Our Team</h3>
+				<hr class="w-32 m-4 border-blue-500 border-2">
+				<p class="text-base w-4/5 sm:w-3/5">We are experiencing exceptional growth and seeking motivated and committed individuals to join our team!</p>
+			</div>
+			<ul class="careers md:w-2/3 mt-8 mr-auto ml-auto">
+				<li class="border-b-1 border-gray-500 pb-2 mb-4">
+					<a href="" class="text-gray-900 heading-s">Entry Level Estimator<i class="fa fa-angle-right text-blue-500" aria-hidden="true"></i></a>
+					<p class="uppercase text-gray-500">Rapid City, SD</p>
+				</li>
+				<li class="border-b-1 border-gray-500 pb-2 mb-4">
+					<a href="" class="text-gray-900 heading-s">Inspection Sales Representative<i class="fa fa-angle-right text-blue-500" aria-hidden="true"></i></a>
+					<p class="uppercase text-gray-500">Rapid City, SD</p>
+				</li>
+				<li class="border-b-1 border-gray-500 pb-2 mb-4">
+					<a href="" class="text-gray-900 heading-s">Fire Sprinkler Engineering CAD Technician<i class="fa fa-angle-right text-blue-500" aria-hidden="true"></i></a>
+					<p class="uppercase text-gray-500">Rapid City, SD</p>
+				</li>
+				<li class="border-b-1 border-gray-500 pb-2 mb-4">
+					<a href="" class="text-gray-900 heading-s">Entry Level Estimator<i class="fa fa-angle-right text-blue-500" aria-hidden="true"></i></a>
+					<p class="uppercase text-gray-500">Rapid City, SD</p>
+				</li>
+				<li class="border-b-1 border-gray-500 pb-2 mb-4">
+					<a href="" class="text-gray-900 heading-s">Inspection Sales Representative<i class="fa fa-angle-right text-blue-500" aria-hidden="true"></i></a>
+					<p class="uppercase text-gray-500">Rapid City, SD</p>
+				</li>
+			</ul>
 		</div>
 	</div>
 
@@ -610,7 +967,7 @@
 	<!-- Footer section -->
 	<footer class="flex flex-col bg-green-500">
 		<div class="container-main w-full font-body flex flex-col md:flex-row mr-auto ml-auto text-white mt-12 pt-6 pl-6 xl:pl-0">
-			<div class="flex flex-col w-full lg:w-1/2">
+			<div class="flex flex-col w-full sm:w-2/5 lg:w-1/2">
 				<div class="flex flex-col lg:flex-row w-full">
 					<div class="flex flex-col w-full lg:w-1/2">
 						<ul>
@@ -645,43 +1002,41 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex flex-col lg:flex-row w-full lg:w-1/2">
-				<div class="flex flex-col w-full lg:w-1/2 states">
-					<div class="mb-8">
+			<div class="flex flex-col lg:flex-row w-full sm:w-3/5 lg:w-1/2">
+				<ul class="w-full md:grid md:grid-cols-2 md:auto-rows-fr md:gap-6 mt-4 states">
+					<li class="mb-8">
 						<h4 class="heading-s mb-2">South Dakota</h4>
 						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Rapid City, SD</p>
 						<p class="phone-text"><i class="phone text-white"></i>(888) 348-2342</p>
-					</div>
-					<div class="mb-8">
+					</li>
+					<li class="mb-8">
+						<h4 class="heading-s mb-2">North Dakota</h4>
+						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+						<p class="mt-2">Bismarck, ND</p>
+						<p class="phone-text"><i class="phone text-white"></i>(701) 250-7037</p>
+					</li>
+					<li class="mb-8">
 						<h4 class="heading-s mb-2">Wyoming</h4>
 						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Casper, WY</p>
 						<p class="phone-text"><i class="phone text-white"></i>(307) 439-4496</p>
 						<p class="mt-2">Cheyenne, WY</p>
 						<p class="phone-text"><i class="phone text-white"></i>(307) 426-4077</p>
-					</div>
-				</div>
-				<div class="flex flex-col w-full lg:w-1/2 states">
-					<div class="mb-8">
-						<h4 class="heading-s mb-2">North Dakota</h4>
-						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
-						<p class="mt-2">Bismarck, ND</p>
-						<p class="phone-text"><i class="phone text-white"></i>(701) 250-7037</p>
-					</div>
-					<div class="mb-8">
+					</li>
+					<li class="mb-8">
 						<h4 class="heading-s mb-2">Colorado</h4>
 						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Aurora, CO</p>
 						<p class="phone-text"><i class="phone text-white"></i>(720) 325-5696</p>
-					</div>
-					<div class="mb-8">
+					</li>
+					<li class="mb-8">
 						<h4 class="heading-s mb-2">Utah</h4>
 						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Salt Lake City, UT</p>
 						<p class="phone-text"><i class="phone text-white"></i>(801) 463-1621</p>
-					</div>
-				</div>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<div class="container-main w-full mr-auto ml-auto copyright pl-6 xl:pl-0">

@@ -70,7 +70,7 @@
 
 	<!-- Homepage banner -->
 	<div class="flex mb-4">
-		<div class="w-full banner-home video-wrapper flex items-center">
+		<div class="w-full banner-home banner-video-wrapper flex items-center">
 			<div class="video-overlay"></div>
 			<!-- add &playlist=hnp1pt8biD4 (the latter part being the video id) to force it to loop -->
 			<iframe src="https://www.youtube.com/embed/hnp1pt8biD4?autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&playsinline=1&start=03&mute=1" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -107,8 +107,8 @@
 	</div>
 
 	<!-- Industries served image/link section -->
-	<div class="flex flex-col mb-4">
-		<div class="xl:w-full md:mx-4 container-main lg:mr-auto lg:ml-auto md:grid md:grid-cols-3 lg:grid-cols-4 auto-rows-fr gap-3 lg:gap-6">
+	<div class="container flex flex-col mb-4">
+		<div class="xl:w-full md:mx-4 lg:mr-auto lg:ml-auto md:grid md:grid-cols-3 lg:grid-cols-4 auto-rows-fr gap-3 lg:gap-6">
 			<div class="md:bg-white ml-auto mr-auto">
 				<a href="#">
 					<div class="card h-full">
@@ -308,7 +308,7 @@
 	<!-- Footer section -->
 	<footer class="flex flex-col bg-green-500">
 		<div class="container-main w-full font-body flex flex-col md:flex-row mr-auto ml-auto text-white mt-12 pt-6 pl-6 xl:pl-0">
-			<div class="flex flex-col w-full lg:w-1/2">
+			<div class="flex flex-col w-full sm:w-2/5 lg:w-1/2">
 				<div class="flex flex-col lg:flex-row w-full">
 					<div class="flex flex-col w-full lg:w-1/2">
 						<ul>
@@ -343,43 +343,41 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex flex-col lg:flex-row w-full lg:w-1/2">
-				<div class="flex flex-col w-full lg:w-1/2 states">
-					<div class="mb-8">
+			<div class="flex flex-col lg:flex-row w-full sm:w-3/5 lg:w-1/2">
+				<ul class="w-full md:grid md:grid-cols-2 md:auto-rows-fr md:gap-6 mt-4 states">
+					<li class="mb-8">
 						<h4 class="heading-s mb-2">South Dakota</h4>
 						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Rapid City, SD</p>
 						<p class="phone-text"><i class="phone text-white"></i>(888) 348-2342</p>
-					</div>
-					<div class="mb-8">
+					</li>
+					<li class="mb-8">
+						<h4 class="heading-s mb-2">North Dakota</h4>
+						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+						<p class="mt-2">Bismarck, ND</p>
+						<p class="phone-text"><i class="phone text-white"></i>(701) 250-7037</p>
+					</li>
+					<li class="mb-8">
 						<h4 class="heading-s mb-2">Wyoming</h4>
 						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Casper, WY</p>
 						<p class="phone-text"><i class="phone text-white"></i>(307) 439-4496</p>
 						<p class="mt-2">Cheyenne, WY</p>
 						<p class="phone-text"><i class="phone text-white"></i>(307) 426-4077</p>
-					</div>
-				</div>
-				<div class="flex flex-col w-full lg:w-1/2 states">
-					<div class="mb-8">
-						<h4 class="heading-s mb-2">North Dakota</h4>
-						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
-						<p class="mt-2">Bismarck, ND</p>
-						<p class="phone-text"><i class="phone text-white"></i>(701) 250-7037</p>
-					</div>
-					<div class="mb-8">
+					</li>
+					<li class="mb-8">
 						<h4 class="heading-s mb-2">Colorado</h4>
 						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Aurora, CO</p>
 						<p class="phone-text"><i class="phone text-white"></i>(720) 325-5696</p>
-					</div>
-					<div class="mb-8">
+					</li>
+					<li class="mb-8">
 						<h4 class="heading-s mb-2">Utah</h4>
 						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Salt Lake City, UT</p>
 						<p class="phone-text"><i class="phone text-white"></i>(801) 463-1621</p>
-					</div>
-				</div>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<div class="container-main w-full mr-auto ml-auto copyright pl-6 xl:pl-0">

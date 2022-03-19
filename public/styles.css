@@ -21812,14 +21812,6 @@ th{
   max-width: 1028px;
 }
 
-.container-main {
-  max-width: 1200px;
-}
-
-.container {
-  max-width: 1290px;
-}
-
 .text-small{
   font-size:14px;
   letter-spacing: .1pt;
@@ -22031,7 +22023,6 @@ button.btn-lg{
 .btn-cta{
   border-width: 1px;
   letter-spacing: .4pt;
-  flex: 1 1 0%;
   font-family: Proxima Nova, sans-serif;
   font-weight: 400;
   padding-top: 1rem;
@@ -22704,6 +22695,16 @@ a.skip-main:focus, a.skip-main:active {
   margin-right: .25rem;
 }
 
+.careers p {
+  padding: 0;
+  margin: 0;
+}
+
+.careers i.fa-angle-right {
+  margin-left: .35rem;
+  font-size: 18px;
+}
+
 .card {
   max-width: 24rem;
   overflow: hidden;
@@ -22825,6 +22826,14 @@ footer li a {
   text-decoration: underline;
 }
 
+.figPeople {
+  max-width: 500px;
+}
+
+.figPeople img {
+  margin-bottom: 1rem;
+}
+
 /* Timeline specific CSS */
 
 .timeline-title {
@@ -22842,19 +22851,11 @@ footer li a {
   height: 300px;
 }
 
-.timeline-title {
-  font-family: "Proxima Nova", Helvetica, sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 1.1pt;
-  line-height: 26px;
-}
-
-.image {
-  background-image: url("https://via.placeholder.com/440x300/ccc/fff.png");
+.image2 {
+  background-image: url("https://via.placeholder.com/484x274/ccc/fff.png");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 274px;
 }
 
 /*==================================
@@ -23055,6 +23056,10 @@ footer li a {
     padding-right: 30px;
   }
 
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-content img {
+    margin-left: 40px;
+  }
+
   .timeline-centered > .timeline-item:nth-child(2n) .timeline-content p {
     margin-left: 13%;
   }
@@ -23123,6 +23128,10 @@ footer li a {
   .md\:border-b-1{
     border-bottom-width: 1px;
   }
+
+  footer .states li:last-of-type {
+    grid-column-start: 2;
+  }
 }
 
 @media (min-width:1024px) {
@@ -23141,11 +23150,27 @@ footer li a {
   .job-container a:first-of-type {
     margin-right: 50px;
   }
+
+  #locMap .states li:nth-of-type(2), .states li:nth-of-type(5) {
+    justify-self: center;
+  }
+
+  locMap .states li:nth-of-type(3), .states li:nth-of-type(6) {
+    justify-self: end;
+  }
+
+  footer .states li:nth-of-type(2), footer .states li:nth-of-type(4), footer .states li:nth-of-type(5) {
+    justify-self: end;
+  }
 }
 
 /* because tablets */
 
 @media (min-width:1025px) {
+  .container-main {
+    max-width: 1290px;
+  }
+
   .show-for-large-flex {
     display: flex;
   }
@@ -23233,10 +23258,6 @@ footer li a {
   and (min-device-width: 320px) 
   and (max-device-width: 1366px)
   and (-webkit-min-device-pixel-ratio: 2) {
-  .container-main {
-    max-width: 100vw;
-  }
-
   .totop {
     bottom: 2%;
     right: 6%;
