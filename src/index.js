@@ -21,6 +21,7 @@ import img05 from './assets/img/img_05.jpg';
 import img06 from './assets/img/img_06.jpg';
 import big_img01 from './assets/img/big_img_01.jpg';
 import img9 from './assets/img/person-image02.jpg';
+import img10 from './assets/img/stadium-news.jpg';
 
 function component() {
   const element = document.createElement('div');

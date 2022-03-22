@@ -60,6 +60,10 @@ module.exports = {
 	    filename: 'homepage.html',
       template: 'src/homepage.html'
     }),
+    new HtmlWebpackPlugin({
+	    filename: 'design-elements.html',
+      template: 'src/design-elements.html'
+    }),
   ],
   output: {
 	  filename:'[name].js',

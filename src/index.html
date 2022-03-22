@@ -14,10 +14,10 @@
 
 	<!-- Header with Nav menu section -->
 	<header class="lg:px-2 px-1 border-b-8 border-green-500 bg-white flex flex-wrap items-center py-3 " id='pagehead'>
-			<div class="container-main ml-auto mr-auto px-2">
+			<div class="container-main ml-auto mr-auto w-full">
 					<nav class="block pt-2">
 						<ul class="block lg:flex lg:flex-wrap xl:flex-no-wrap  xl:items-stretch xl:justify-between ">
-							<li class="flex text-center lg:text-left w-full lg:w-1/2 xl:w-1/3 justify-between" >
+							<li class="flex text-center lg:text-left w-full lg:w-1/4 xl:w-1/3 justify-between" >
 							<a href="/"><img src="./assets/img/rapidfire-logo.png" alt=""></a>
 			
 								<a class="menu-toggle lg:hidden  align-top h-12" id='mobileMenuToggle' v-on:click="openMobileMenuContainer"  v-bind:class="{ 'change': m_showing}">
@@ -26,10 +26,10 @@
 								  <div class="bar3"></div>
 								</a>
 							  </li>
-							<li class="primary_nav lg:flex lg:justify-center lg:w-full lg:w-auto lg:ml-auto lg:mr-auto xl:mr-0 items-center" v-bind:class="{'block': m_showing, 'hidden': !m_showing}">
+							<li class="primary_nav lg:flex lg:justify-center lg:w-3/4 xl:w-2/3 lg:ml-auto lg:mr-auto xl:mr-0 items-center" v-bind:class="{'block': m_showing, 'hidden': !m_showing}">
 								<a href="#" class="menu-title lg:px-4 py-3 lg:py-1 block lg:flex mr-auto ml-auto lg:m-0">Our Work</a>
 								<a href="#" class="menu-title lg:px-4 py-3 lg:py-1 block lg:flex mr-auto ml-auto lg:m-0">Services</a>
-								<button class="menu-title w-full lg:w-auto border-none lg:pl-4 pr-0 pl-0 py-3 lg:py-1 block lg:flex lg:mr-auto lg:ml-auto lg:m-0 text-left" v-on:mouseover.self="hovermenu" v-on:click.self="togglemenu" v-on:mouseout='hideboard' data-menu='menu-one' name="Company">Company<i class="text-blue-500 ml-1 lg:pr-4 fa fa-angle-down"></i></button>
+								<button class="menu-title border-none pr-0 pl-0 py-3 lg:py-1 block lg:flex lg:mr-auto lg:ml-auto lg:m-0 text-left" v-on:mouseover.self="hovermenu" v-on:click.self="togglemenu" v-on:mouseout='hideboard' data-menu='menu-one' name="Company">Company<i class="text-blue-500 ml-1 lg:pr-4 fa fa-angle-down"></i></button>
 								<div class="vertical-menu" data-nav='menu-one' data-menu-place='left' v-bind:style="{ display: display.one }">
 									<ul class="subnav">
 									
@@ -43,7 +43,7 @@
 								</div>
 								<a href="#" class="menu-title lg:px-4 py-3 lg:py-1 block lg:flex mr-auto ml-auto lg:m-0">Careers</a>
 								<a href="#" class="menu-title lg:px-4 py-3 lg:py-1 block lg:flex mr-auto ml-auto lg:m-0">Contact</a>
-								<button class="menu-title w-full lg:w-auto border-none lg:pl-4 pr-0 pl-0 py-3 lg:py-1 block lg:flex lg:mr-auto lg:ml-auto lg:m-0 text-left" v-on:mouseover.self="hovermenu" v-on:click.self="togglemenu" v-on:mouseout='hideboard' data-menu='menu-two' name="Acquisitions">Acquisitions<i class="text-blue-500 ml-1 lg:pr-4 fa fa-angle-down"></i></button>
+								<button class="menu-title border-none pr-0 pl-0 py-3 lg:py-1 block lg:flex lg:mr-auto lg:ml-auto lg:m-0 text-left" v-on:mouseover.self="hovermenu" v-on:click.self="togglemenu" v-on:mouseout='hideboard' data-menu='menu-two' name="Acquisitions">Acquisitions<i class="text-blue-500 ml-1 lg:pr-4 fa fa-angle-down"></i></button>
 								<div class="vertical-menu" data-nav='menu-two' data-menu-place='left' v-bind:style="{ display: display.two }">
 									<ul class="subnav">
 									
@@ -107,7 +107,7 @@
 	</div>
 
 	<!-- other page heading section - no page links -->
-	<div class="flex mark mb-4" id='main'>
+	<div class="flex mark my-12" id='main'>
 		<div class="w-full container-main mt-4 mb-8 mr-auto ml-auto">
 			<div class="w-5/6 lg:w-2/3 ml-4 lg:mr-auto lg:ml-auto lg:text-center">
 				<h1 class="font-display section-heading sm:page-heading text-gray-900 font-bold mt-5 mb-5">Industries We Serve</h1>
@@ -117,7 +117,7 @@
 	</div>
 
 	<!-- Industries served image/link section -->
-	<div class="flex flex-col mb-4">
+	<div class="flex flex-col my-12">
 		<div class="xl:w-full md:mx-4 container-main xl:mr-auto xl:ml-auto md:grid md:grid-cols-3 lg:grid-cols-4 auto-rows-fr gap-3 lg:gap-6">
 			<div class="md:bg-white ml-auto mr-auto">
 				<a href="#">
@@ -272,19 +272,19 @@
 	<!-- Industries detail H1 header w/background -->
 	<!-- for locations H1 header w/background swap out 'detail-banner' class for 'location-banner' -->
 
-	<div class="flex flex-col mb-4">
+	<div class="flex flex-col my-12">
 		<div class="w-full bg-green-500">
-			<div class="ml-4 xl:ml-auto xl:mr-auto my-4">
+			<div class="container-main w-5/6 xl:w-full ml-auto mr-auto my-4">
 				<p><span class="breadcrumb">Industries | <span class="active">Healthcare</span></span></p>
 			</div>
 		</div>
 		<div class="w-full detail-banner py-12">
-			<div class="ml-4 xl:ml-auto xl:mr-auto my-8"><h1 class="font-display section-heading text-white">Fire Protection Systems & Services</h1></div>
+			<div class="container-main w-5/6 xl:w-full ml-auto mr-auto my-8"><h1 class="font-display section-heading text-white">Fire Protection Systems & Services</h1></div>
 		</div>
 	</div>
 
 	<!-- Industries detail heading -->
-	<div class="flex mark mb-4" id='main'>
+	<div class="flex mark my-12" id='main'>
 		<div class="w-full container-main mt-4 mb-8 mr-auto ml-auto">
 			<div class="flex flex-col lg:flex-row mt-12">
 				<div class="w-5/6 lg:w-3/5 ml-4 sm:ml-8 xl:ml-0">
@@ -303,7 +303,7 @@
 	</div>
 
 	<!-- Industries detail cards -->
-	<div class="flex flex-col mb-4">
+	<div class="flex flex-col my-12">
 		<div class="xl:w-full md:mx-4 container-main xl:mr-auto xl:ml-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-6 mt-4">
 			<div class="flex-grab ml-auto mr-auto">
 				<a href="#">
@@ -372,7 +372,7 @@
 	</div>
 
 	<!-- Service detail heading section -->
-	<div class="flex mark mb-4" id='main'>
+	<div class="flex mark my-12" id='main'>
 		<div class="w-full container-main mt-4 mb-8 mr-auto ml-auto">
 			<div class="flex flex-col-reverse md:w-2/3 xl:w-full md:mr-auto md:ml-auto xl:flex-row mt-12 svc-cta-container">
 				<div class="w-5/6 xl:w-3/5 mr-auto ml-auto sm:ml-8 xl:ml-0">
@@ -400,7 +400,7 @@
 	</div>
 
 	<!-- Vimeo embed section -->
-	<div class="flex mb-4">
+	<div class="flex my-12">
 		<div class="mr-auto ml-auto w-5/6">
 			<div class="videoWrapper ml-auto mr-auto">
 				<iframe src="https://player.vimeo.com/video/235215203?h=f7635d145a" width="1029" height="574" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
@@ -409,7 +409,7 @@
 	</div>
 
 	<!-- Text quote section -->
-	<div class="flex mb-4 w-5/6 mr-auto ml-auto">
+	<div class="flex my-12 w-5/6 mr-auto ml-auto">
 		<div class="mr-auto ml-auto w-full md:w-2/3 xl:w-1/2 read">
 			<img src="/assets/img/quotes.svg" alt="green quotation mark"  width="30px">
 			<blockquote class="mx-4 lg:mx-0">
@@ -420,12 +420,12 @@
 	</div>
 
 	<!-- image gallery section -->
-	<div class="flex flex-col mb-4">
+	<div class="flex flex-col my-12">
 		<div class="xl:w-full md:mx-4 container-gallery xl:mr-auto xl:ml-auto">
 			<img src="./assets/img/big_img_01.jpg" alt="">
 		</div>
 		<div class="xl:w-full md:mx-4 container-gallery xl:mr-auto xl:ml-auto">
-			<div class=" md:grid md:grid-cols-3 lg:grid-cols-4 auto-rows-fr gap-3 lg:gap-6 gallery">
+			<div class="w-5/6 lg:w-full mr-auto ml-auto grid md:grid-cols-3 lg:grid-cols-4 auto-rows-fr gap-3 lg:gap-6 gallery place-items-center">
 				<div class="h-full place-self-center">
 					<img class="w-full" src="./assets/img/img_01.jpg" alt="Image">
 				</div>
@@ -449,14 +449,14 @@
 	</div>
 
 	<!-- Centered text block -->
-	<div class="flex mb-4">
+	<div class="flex my-12">
 		<div class="w-5/6 lg:w-2/3 container-main md:mr-auto md:ml-auto read flex md:flex-row md:justify-center my-6">
 			<p>Pellentesque faucibus nisi in urna vulputate RFPG. Nunc nec mauris ut tortor dignissim consectetur. Suspendisse malesuada ante a congue porta. Nam id mauris non erat congue sagittis. Morbi accumsan, turpis quis gravida convallis, libero lacus accumsan metus, nec imperdiet ligula eros in ipsum. Nunc nec mauris ut tortor dignissim consectetur. RFPG lacus accumsan metus, nec imperdiet ligula eros in ipsum. Nunc nec mauris ut tortor dignissim.</p>
 		</div>
 	</div>
 
 	<!-- Blue info boxes -->
-	<div class="flex mb-4">
+	<div class="flex my-12">
 		<div class="w-full lg:w-5/6 container-main mx-4 md:mr-auto md:ml-auto">
 			<div class="flex flex-col md:flex-row md:justify-center">
 				<div class="bg-blue-500 text-white text-center p-8 border-b-1 md:border-r-1 border-white md:w-1/3">
@@ -476,20 +476,20 @@
 	</div>
 
 	<!-- learn more button -->
-	<div class="flex mb-4">
+	<div class="flex my-12">
 		<div class="mr-auto ml-auto my-12">
 			<a href="#" class="btn-cta mb-4 uppercase">Learn More</a>
 		</div>
 	</div>
 
 	<!-- Our Company section with buttons -->
-	<div class="flex mb-4" id='main'>
+	<div class="flex mark my-12" id='main'>
 		<div class="w-full container-main mt-4 mb-8 mr-auto ml-auto">
-			<div class="w-5/6 lg:w-2/3 mark ml-4 md:mr-auto md:ml-auto lg:text-center mb-8">
+			<div class="w-5/6 lg:w-2/3 mr-auto ml-auto lg:text-center mb-8">
 				<h1 class="font-display section-heading sm:page-heading text-gray-900 font-bold mt-5 mb-5">Rapid Fire Protection, Inc.</h1>
 				<p>Rapid Fire Protection is more than a fire protection contractor, we are your partner who protects your property and assets with custom fire sprinkler, suppression and alarm systems - designed, installed and serviced by the industries best. We are proud to offer fire protection systems and services across the nation and internationally. With projects completed in more than half of the U.S. and over 25 years of experience, we have the team and expertise to provide you with the solution that best fits your needs.</p>
 			</div>
-			<div class="w-5/6 md:mr-auto md:ml-auto flex flex-col my-8 lg:flex-row items-stretch md:justify-evenly">
+			<div class="w-5/6 mr-auto ml-auto flex flex-col my-8 lg:flex-row items-stretch md:justify-evenly">
 				<a href="#" class="btn-cta flex-1 uppercase text-center lg:mr-2">About Us</a>
 				<a href="#" class="btn-cta flex-1 uppercase text-center lg:mr-2">Our People</a>
 				<a href="#" class="btn-cta flex-1 uppercase text-center lg:mr-2">Locations</a>
@@ -501,8 +501,8 @@
 
 	<!-- timeline section -->
 	<!-- NOTE: the class 'image' in this particular case is *only* to pull in a placeholder! It can be dropped from production files or replaced.-->
-	<div class="flex mb-4">
-		<div class="container-gallery mx-5 sm:w-full lg:mr-auto lg:ml-auto">
+	<div class="flex my-12">
+		<div class="container-gallery w-5/6 xl:w-full mr-auto ml-auto">
 			<ul class="timeline timeline-centered">
 				<li class="timeline-item">
 					<div class="timeline-marker"></div>
@@ -555,7 +555,7 @@
 					</div>
 				</li>
 			</ul>
-			<div class="w-5/6 read mb-8">
+			<div class="xl:w-5/6 read mb-8">
 				<h4>Acquisition Opportunities</h4>
 				<p>Interested in joining us? We are seeking leading fire protection services organizations to expand our team and grow our national presence. Learn how you can accelerate your growth goals.</p>
 				<a href="" class="btn-cta uppercase my-4">Learn About Acquisitions</a>
@@ -564,10 +564,9 @@
 	</div>
 
 	<!-- people cards -->
-	<!-- NOTE: the class 'image2' in this particular case is *only* to pull in a placeholder! It can be dropped from production files or replaced.-->
-	<div class="flex flex-col mb-4">
-		<div class="w-full container-main lg:mr-auto lg:ml-auto flex flex-col-reverse items-center xl:flex-row xl:justify-between">
-			<div class="w-2/3 mb-12">
+	<div class="flex flex-col my-12">
+		<div class="w-5/6 xl:w-full container-main mr-auto ml-auto flex flex-col-reverse items-center xl:flex-row xl:justify-between">
+			<div class="w-full lg:w-2/3 mb-12">
 				<h2 class="heading-xxs mb-4 text-blue-500 uppercase">Always Safe, Always Prepared</h2>
 				<p>We protect what matters to you; people, property and business assets. Rapid Fire Protection is a full-service fire suppression systems contractor specializing in design, installation, and service of fire alarm systems, automatic fire sprinkler systems, and fire protection systems for the commercial, industrial and residential market.</p>
 				<p>We are proud to offer fire protection systems and services across the nation as well as internationally. With projects completed in more than half of the U.S. and over 25 years of experience, we have the team and expertise to provide you with the solution that best fits your needs.</p>
@@ -575,14 +574,14 @@
 			</div>
 			<div class="figPeople flex flex-row mb-12 xl:justify-end">
 				<figure class="xl:ml-4">
-					<img src="" alt="" class="image2">
+					<img src="https://via.placeholder.com/484x274/ccc/fff.png" alt="" class="image2">
 					<figcaption>The December 2019 annual training was an opportunity for our team to come 
 						together, look back at the wins for the past year and reflect on strategy and 
 						future goals we aspire to reach.</figcaption>
 				</figure>
 			</div>
 		</div>
-		<div class="mx-4 xl:mr-auto xl:ml-auto">
+		<div class="container-main w-5/6 xl:w-full mr-auto ml-auto">
 			<h2 class="heading-xxs text-blue-500 uppercase">Hardcoded Section Heading</h2>
 			<div class="w-full lg:mr-auto lg:ml-auto md:grid md:grid-cols-2 lg:grid-cols-4 md:auto-rows-fr md:gap-6 mt-4">
 				<div class="flex-grab  ml-auto mr-auto">
@@ -710,15 +709,15 @@
 	</div>
 
 	<!-- Map section -->
-	<div class="flex mb-12">
+	<div class="flex my-12">
 		<div class="container-main mr-auto ml-auto mb-12">
 			<img src="https://via.placeholder.com/1290x772/ccc/fff.png" alt="">
 		</div>
 	</div>
 	<div class="flex my-8 bg-white" id="locMap">
-		<div class="container-main mt-12 w-full lg:mr-auto lg:ml-auto">
-			<h3 class="heading-xxs text-blue-500 uppercase mx-4 xl:mx-0">Rapid Fire Protection Offices</h3>
-			<ul class="md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-6 mt-4 mx-4 xl:mx-0 states">
+		<div class="container-main mt-12 w-5/6 lg:w-full mr-auto ml-auto lg:mx-8 xl:mr-auto xl:ml-auto">
+			<h3 class="heading-xxs text-blue-500 uppercase">Rapid Fire Protection Offices</h3>
+			<ul class="md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-6 mt-4 states">
 				<li class="mb-8">
 					<h4 class="heading-s mb-2">South Dakota</h4>
 					<a href="" class="text-blue-500 uppercase arrow-links"><span class="border-b-1 border-blue-500">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
@@ -754,8 +753,8 @@
 				</li>
 			</ul>
 			<hr class="border-1 border-gray-300 mb-12">
-			<h3 class="heading-xxs text-blue-500 uppercase mx-4 xl:mx-0">Rapid Fire Protection Group Offices</h3>
-			<ul class="md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-6 mt-4 mx-4 xl:mx-0 states">
+			<h3 class="heading-xxs text-blue-500 uppercase">Rapid Fire Protection Group Offices</h3>
+			<ul class="md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-6 mt-4 states">
 				<li class="mb-8">
 					<h4 class="heading-s mb-2">California</h4>
 					<p class="mt-2">Pleasanton, CA</p>
@@ -770,13 +769,11 @@
 	</div>
 
 	<!-- Location Detail section -->
-	<div class="flex mb-4">
-		<div class="container-main w-full mr-auto ml-auto">
-			<div class="flex flex-col lg:mx-4 xl:mx-0">
-				<div class="sm:w-3/4 lg:w-full md:ml-auto md:mr-auto">
-					<h2 class="heading-s mb-4">Colorado Offices</h2>
-				</div>
-				<div class="sm:w-3/4 lg:w-full md:ml-auto md:mr-auto flex flex-col lg:flex-row">
+	<div class="flex my-12">
+		<div class="container-main mt-12 w-5/6 lg:w-full mr-auto ml-auto lg:mx-8 xl:mr-auto xl:ml-auto">
+			<div class="flex flex-col">
+				<h2 class="heading-s mb-4">Colorado Offices</h2>
+				<div class="flex flex-col lg:flex-row">
 					<div class="sm:w-full lg:w-1/4 mt-4 mx-4 xl:mx-0 md:ml-auto md:mr-auto">
 						<h3 class="heading-xxs text-blue-500 uppercase">Aurora Team</h3>
 						<p>1650 Jasper Street, Unit H<br/>
@@ -831,7 +828,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="sm:w-3/4 lg:w-full md:ml-auto md:mr-auto flex flex-col lg:flex-row">
+				<div class="flex flex-col lg:flex-row">
 					<div class="sm:w-full lg:w-1/4 mt-4 mx-4 xl:mx-0 md:ml-auto md:mr-auto">
 						<h3 class="heading-xxs text-blue-500 uppercase">Colorado Springs Team</h3>
 						<p>2395 Briargate Boulevard<br/>
@@ -876,12 +873,12 @@
 	</div>
 
 	<!-- Careers section - note that gallery can be obtained from gallery section -->
-	<div class="flex mb-4">
+	<div class="flex my-12">
 		<div class="container-main mr-auto ml-auto mt-8">
-			<div class="flex flex-col lg:flex-row md:w-3/5 mr-auto ml-auto">
+			<div class="flex flex-col lg:flex-row w-5/6 md:w-3/5 mr-auto ml-auto">
 				<img src="./assets/img/person-image02.jpg" alt="person">
-				<div class="mr-auto ml-auto w-full md:w-2/3 xl:w-1/2 read">
-					<img src="/assets/img/quotes.svg" alt="green quotation mark"  width="30px">
+				<div class="mr-auto ml-auto lg:mx-4 w-full md:w-2/3 xl:w-1/2 read">
+					<img src="/assets/img/quotes.svg" alt="green quotation mark"  width="30px" class="mt-8">
 					<blockquote class="mx-4 lg:mx-0">
 						<p>Our most valuable assets are our people. We are so grateful for the company culture that fosters growth and development. Pellentesque faucibus nisi in urna vulputate RFP. Nam id mauris non erat congue sagittis.</p>
 					</blockquote>
@@ -893,7 +890,7 @@
 				<hr class="w-32 m-4 border-blue-500 border-2">
 				<p class="text-base w-4/5 sm:w-3/5">We are experiencing exceptional growth and seeking motivated and committed individuals to join our team!</p>
 			</div>
-			<ul class="careers md:w-2/3 mt-8 mr-auto ml-auto">
+			<ul class="careers w-5/6 md:w-2/3 mt-8 mr-auto ml-auto">
 				<li class="border-b-1 border-gray-500 pb-2 mb-4">
 					<a href="" class="text-gray-900 heading-s">Entry Level Estimator<i class="fa fa-angle-right text-blue-500" aria-hidden="true"></i></a>
 					<p class="uppercase text-gray-500">Rapid City, SD</p>
@@ -915,6 +912,163 @@
 					<p class="uppercase text-gray-500">Rapid City, SD</p>
 				</li>
 			</ul>
+		</div>
+	</div>
+
+	<!-- News detail section -->
+	<div class="flex markTwo my-12">
+		<div class="container-main news lg:mr-auto lg:ml-auto flex flex-col xl:flex-row">
+			<div class="w-5/6 xl:w-3/5 mr-auto ml-auto">
+				<img src="./assets/img/stadium-news.jpg" alt="">
+				<h4 class="text-blue-500 uppercase heading-xxs my-4">November 12, 2019</h4>
+				<h1 class="page-heading mb-4">Setting the bar high for retrofit without operational disruption</h1>
+				<div class="read pr-2 mb-8">
+					<p>Rapid Fire doesn’t do anything small, and that includes competition. We are here to represent! This year, that is exactly what we did. Rapid Fire had the privilege of sending one of our aspiring apprentices to the National American Fire Sprinkler Competition held in San Diego, CA. Joe Headrick, an apprentice out of our North Dakota Region, was our competitor and represent he did. Joe brought it!  He placed 1st in the 2019 AFSA Competition. He took each feat with ease. Completing his written test in just under 30 minutes and moving into the installation with fluency. The awards ceremony was filled with excitement and apprehension.  But Joe’s skill stood alone and his excellence was rewarded!</p>
+					<p>Joe came to Rapid Fire in August of 2017.  He has accelerated through his books at a breakneck pace, showing mastery for the trade with each pipe installed.</p>
+					<p>Randy Ables, the North Dakota Regional Manager and Dan Chrest, the North  Dakota Regional Labor Superintendent, both have laid testament to Joe’s work ethic, heart to be part of the team and diligence to get the job done right!  He has been a shining star in our Northern Region.</p>
+					<p>When asked to share his thoughts on his journey, Joe said it so perfectly.  “It is quite an experience and I think everyone should try their best to get there.”  What a true testament that hard work and perseverance do yield reward! Joe, we are proud of you and can’t wait to see the big things you will contribute to our Rapid Fire Team!  We feel we have only hit the tip of the iceberg on the value you will create by being one of our own.</p>
+				</div>
+			</div>
+			<div class="w-5/6 xl:w-2/5 mr-auto ml-auto mt-8 xl:mt-0 xl:pl-6">
+				<div class="flex flex-row justify-between pb-4 border-b-2 border-blue-500">
+					<h4 class="text-blue-500 uppercase heading-xxs">More News</h4>
+					<a href="" class="uppercase text-base">View All Articles <i class="fa fa-angle-right text-blue-500" aria-hidden="true"></i></a>
+				</div>
+				<ul class="flex flex-col">
+					<li class="border-b-1 border-gray-500 py-6 mb-4"><a href="" class="heading-s">Joe Headrick Wins National Competition</a></li>
+					<li class="border-b-1 border-gray-500 py-6 mb-4"><a href="" class="heading-s">Celebrating 25 years of Saving Lives!</a></li>
+					<li class="border-b-1 border-gray-500 py-6 mb-4"><a href="" class="heading-s">John Cowger - AFSA National Apprentice Competition Finalist</a></li>
+					<li class="border-b-1 border-gray-500 py-6 mb-4"><a href="" class="heading-s">"Fire Sprinklers Save Lives" Award</a></li>
+					<li class="border-b-1 border-gray-500 py-6 mb-4"><a href="" class="heading-s">Black Hills Corporation Headquarters Project</a></li>
+					<li class="border-b-1 border-gray-500 py-6 mb-4"><a href="" class="heading-s">Kiewit Turner Safety Award</a></li>
+				</ul>
+				<div class="svc-cta-box flex flex-row show-for-large-flex mt-4 mr-2">
+					<div class="w-2/5"><p class="text-white">Taking care of all your Fire Protection needs!</p></div>
+					<div class="w-1/2 ml-10 mt-4"><a href="" class="btn-cta uppercase">Request a Quote <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Form section -->
+	<div class="flex markTwo my-12">
+		<div class="container-main mt-4 mb-8 mr-auto ml-auto">
+			<div class="w-5/6 lg:w-2/3 mr-auto ml-auto lg:text-center mb-8">
+				<h1 class="font-display section-heading sm:page-heading text-gray-900 font-bold mt-5 mb-5">Request a Quote</h1>
+				<p>To request a quote from RFP for your next fire protection project, please submit an inquiry through our form or give us a call!</p>
+			</div>
+			<div class="flex flex-col lg:flex-row">
+				<div class="w-5/6 mr-auto ml-auto xl:w-3/5 mt-12">
+					<h3 class="heading-xxs text-blue-500 uppercase">Let's Talk About Your Needs</h3>
+					<form action="" class="flex flex-col">
+						<ul>
+							<li>
+								<label for="fullName">Full Name <span class="required">*</span></label>
+								<input type="text" id="fullName" class="mt-1">
+							</li>
+							<li>
+								<label for="companyName">Company Name <span class="required">*</span></label>
+									<input type="text" id="companyName" class="mt-1">
+							</li>
+							<li>
+								<label for="email">Email Address <span class="required">*</span></label>
+									<input type="text" id="email" class="mt-1">
+							</li>
+							<li>
+								<label for="phone">Phone Number <span class="required">*</span></label>
+									<input type="text" id="phone" class="mt-1">
+							</li>
+							<li class="relative">
+								<label for="reach">What's the best way for us to reach you? <span class="required">*</span></label>
+									<select name="reach" id="reach" class="mt-1">
+										<option value="email">Email Address</option>
+										<option value="phone">Phone Number</option>
+									</select>
+									<div class="pointer-events-none absolute right-0 flex items-center px-2 text-blue-500 angle-down">
+										<i class="fa fa-angle-down"></i>
+									</div>
+							</li>
+							<li>
+								<label for="city">City</label>
+									<input type="text" class="mt-1">
+							</li>
+							<li class="relative">
+								<label for="state">State <span class="required">*</span></label>
+									<select name="state" id="state" class="mt-1">
+										<option value="alabama">Alabama</option>
+										<option value="alaska">Alaska</option>
+										<option value="arizona">Arizona</option>
+									</select>
+									<div class="pointer-events-none absolute flex items-center px-2 text-blue-500 angle-down">
+										<i class="fa fa-angle-down"></i>
+									</div>
+							</li>
+							<li>
+								<label for="summary">Project Summary</label>
+									<textarea name="summary" id="message" cols="30" rows="10" class="mt-1"></textarea>
+							</li>
+							<li>
+								<label for="services">What services are you interested in? <span class="required">*</span></label><br/>
+									<input type="checkbox" id="sprinkler" class="mb-4"><label for="sprinkler">&nbsp; Fire Sprinkler Systems</label><br/>
+									<input type="checkbox" id="inspection" class="mb-4"><label for="inspection">&nbsp; Service & Inspection</label><br/>
+									<input type="checkbox" id="design" class="mb-4"><label for="design">&nbsp; Fire Protection Design & Engineering</label><br/>
+									<input type="checkbox" id="systems" class="mb-4"><label for="systems">&nbsp; Fire Protection Systems</label><br/>
+									<input type="checkbox" id="security" class="mb-4"><label for="security">&nbsp; Fire Alarm & Security Systems</label><br/>
+									<input type="checkbox" id="foam" class="mb-4"><label for="foam">&nbsp; AFFF Firefighting Foam Replacement</label>
+							</li>
+							<li>
+								<label for="message">Any other information you'd like to share with us?</label>
+								<textarea name="message" id="" cols="30" rows="10" class="mt-1"></textarea>
+							</li>
+							<li>
+								By completing this form, you are consenting to our <a href="">Privacy Policy</a>.<br/>
+								<input type="checkbox" id="policy"><label for="policy">&nbsp; I agree to the terms of the Privacy Policy. <span class="required">*</span></label>
+							</li>
+						</ul>
+					</form>
+				</div>
+				<div class="w-5/6 mr-auto ml-auto xl:w-2/5 xl:ml-8 mt-12 flex flex-col">
+					<h3 class="heading-xxs text-blue-500 uppercase">New Project Inquiries</h3>
+					<div class="read">
+						<p>Every project has a unique need. Let us discuss your unique challenges and how we can provide the right solutions and services just for you.</p>
+						<p class="phone-text"><i class="phone text-gray-500"></i>(888) 348-2342</p>
+					</div>
+					<ul class="grid gap-3 lg:gap-6">
+						<li class="mb-8">
+							<h4 class="heading-s mb-2">South Dakota</h4>
+							<a href="" class="text-blue-500 uppercase arrow-links"><span class="border-b-1 border-blue-500">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+							<p class="mt-2">Rapid City, SD</p>
+							<p class="phone-text"><i class="phone text-gray-500"></i>(888) 348-2342</p>
+						</li>
+						<li class="mb-8">
+							<h4 class="heading-s mb-2">North Dakota</h4>
+							<a href="" class="text-blue-500 uppercase arrow-links"><span class="border-b-1 border-blue-500">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+							<p class="mt-2">Bismarck, ND</p>
+							<p class="phone-text"><i class="phone text-gray-500"></i>(701) 250-7037</p>
+						</li>
+						<li class="mb-8">
+							<h4 class="heading-s mb-2">Wyoming</h4>
+							<a href="" class="text-blue-500 uppercase arrow-links"><span class="border-b-1 border-blue-500">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+							<p class="mt-2">Casper, WY</p>
+							<p class="phone-text"><i class="phone text-gray-500"></i>(307) 439-4496</p>
+							<p class="mt-2">Cheyenne, WY</p>
+							<p class="phone-text"><i class="phone text-gray-500"></i>(307) 426-4077</p>
+						</li>
+						<li class="mb-8">
+							<h4 class="heading-s mb-2">Colorado</h4>
+							<a href="" class="text-blue-500 uppercase arrow-links"><span class="border-b-1 border-blue-500">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+							<p class="mt-2">Aurora, CO</p>
+							<p class="phone-text"><i class="phone text-gray-500"></i>(720) 325-5696</p>
+						</li>
+						<li class="mb-8">
+							<h4 class="heading-s mb-2">Utah</h4>
+							<a href="" class="text-blue-500 uppercase arrow-links"><span class="border-b-1 border-blue-500">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+							<p class="mt-2">Salt Lake City, UT</p>
+							<p class="phone-text"><i class="phone text-gray-500"></i>(801) 463-1621</p>
+						</li>
+					</ul>
+				</div>
+		</div>
 		</div>
 	</div>
 

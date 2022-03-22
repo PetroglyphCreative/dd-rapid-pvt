@@ -83,7 +83,7 @@ th{
 .banner-video-wrapper iframe, .banner-video-wrapper video {
   display: none;
 }
-.mark {
+.mark, .markTwo {
   background-image: url('../img/rapidfire-mark.png');
   background-position: 90% 100%;
   background-size: auto;
@@ -94,8 +94,8 @@ th{
   margin-right: .5rem;
   margin-bottom: .85rem;
 }
-.mark ul li:nth-child(2) {
-  margin-right: 0;
+.required {
+  @apply text-red-500;
 }
 .detail-banner {
   background: linear-gradient(
@@ -125,6 +125,10 @@ th{
 .gallery img {
   max-width: 220px;
 }
+.news img {
+  max-width: 759px;
+  width: 100%;
+}
 .news-image {
   height: 200px;
   width: 400px;
@@ -135,13 +139,13 @@ th{
 .container-gallery {
   max-width: 1028px;
 }
-.text-small{
+.text-small /* body small */{
 	font-size:14px;
   letter-spacing: .1pt;
 	line-height:18px;
 	@apply font-body font-normal;
 }
-.text-normal{
+.text-normal /* body */{
 	font-size:16px;
   letter-spacing: .1pt;
 	line-height:24px;
@@ -185,7 +189,14 @@ th{
 	font-weight:600;
 	@apply font-display;
 }
-.heading-s{
+.heading-s {
+	font-size:24px;
+	line-height:26px;
+  letter-spacing: .1pt;
+	font-weight:600;
+	@apply font-display;
+}
+.heading2{
 	font-size:24px;
 	line-height:26px;
   letter-spacing: .1pt;
@@ -213,6 +224,13 @@ th{
 	@apply font-display;
 }
 .cta-heading{
+	font-size:40px;
+	line-height:46px;
+  letter-spacing: .24pt;
+	font-weight:600;
+	@apply font-display;
+}
+.heading-xl{
 	font-size:40px;
 	line-height:46px;
   letter-spacing: .24pt;
@@ -370,10 +388,10 @@ button.btn-lg{
 	@apply text-red-500 text-xs italic
 }
 label{
-	@apply font-bold;
+	@apply font-medium;
 }
 input[type='text'], textarea {
-	@apply shadow bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
+	@apply bg-white appearance-none w-full py-4 px-4 text-gray-700 leading-tight;
 }
 input[type='text']:focus, textarea:focus{
 	@apply outline-none shadow-outline;
@@ -385,13 +403,21 @@ input.error {
 	@apply shadow appearance-none border border-red-500 bg-red-100 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight;
 }
 select{
-	@apply block appearance-none w-full   border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight;
+	@apply block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight;
 }
 select:focus{
  @apply   outline-none shadow-outline bg-white border-green-700;
 }
 select.error {
 	@apply shadow appearance-none border border-red-500 bg-red-100 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight;
+}
+.angle-down {
+  bottom: 12px;
+  right: 20px;
+  @apply text-blue-500;
+}
+.angle-down .fa-angle-down {
+  font-size: 20px;
 }
 ::selection {
   background: #F7C5A4; /* WebKit/Blink Browsers */
@@ -410,12 +436,11 @@ p.toobig{ min-width:91px;}
 .read p {
  @apply  max-w-3xl my-4 text-medium;
 }
-.read h1 {@apply page-heading}
-.read h2 {@apply section-heading my-8;}
-.read.home h2 {@apply ;}
-.read h3{@apply page-heading my-2;}
-.read h4 {@apply heading-s my-2;}
-.read h5 {@apply heading-xs my-2;}
+.read h1 {@apply heading-xl}
+.read h2 {@apply page-heading my-8;}
+.read h3{@apply heading2 my-2;}
+.read h4 {@apply heading-xs my-2;}
+.read h5 {@apply heading-xxs my-2;}
 .read figure { @apply ml-auto mr-auto my-2;}
 .read ul {
    @apply  max-w-xl m-4 text-large leading-snug list-disc;
@@ -670,10 +695,9 @@ footer li a {
   height: 300px;
 }
 .image2 {
-  background-image: url("https://via.placeholder.com/484x274/ccc/fff.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 274px;
+  height:100%;
+  max-height: 274px;
+  width: 100%;
 }
 /*==================================
     TIMELINE
@@ -875,6 +899,17 @@ footer li a {
     font-size:36px;
     line-height:40px;
   }
+  .heading-s {
+    font-size: 22px;
+  }
+}
+@media (max-width:1024px) {
+  .mark {
+    background-position: 98% 97%;
+  }
+  .markTwo {
+    background: none;
+  }
 }
 @media (max-width:1279px) {
   .svc-cta-box {
@@ -914,9 +949,6 @@ footer li a {
   header nav ul.subnav {
     margin-top:11px;
   }
-  .mark {
-    background-position: 98% 97%;
-  }
   .job-container a:first-of-type {
     margin-right: 50px;
   }
@@ -939,8 +971,8 @@ footer li a {
   .show-for-large-flex {
     display: flex;
   }
-  .mark {
-    background-position: 40px;
+  .mark, .markTwo {
+    background-position: 40px 40px;
   }
   .cta-image {
     background-image: url('../img/cta-image.png');
