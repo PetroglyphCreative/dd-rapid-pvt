@@ -32,8 +32,6 @@ function component() {
   return element;
 }
 
-document.getElementsByTagName('footer')[0].appendChild(component());
-
 var drawer = new Vue({
 	el:'div.drawer',
 	data: {
@@ -45,8 +43,24 @@ var drawer = new Vue({
 		}
 	}
 });
-
-
+var gallery = new Vue({
+	el: 'div#gallery',
+	data: {
+		//targetImg:document.querySelectorAll('#gallery > .thumb')[0].getAttribute('data-full'),
+		targetImg:document.querySelectorAll('div#gallery   img.thumb')[0].getAttribute('data-full'),
+		targetAlt:document.querySelectorAll('div#gallery   img.thumb')[0].getAttribute('alt')
+	
+	//	targetAlt:this.getElementsByClassName("main")[0].target.getAttribute('alt')
+	},
+	methods: {
+		selectImage: function(event){
+			//console.log(document.querySelectorAll('div#gallery   img.thumb')[0].getAttribute('data-full'));
+			this.targetImg = event.currentTarget.getAttribute('data-full');
+			this.targetAlt = event.currentTarget.getAttribute('alt');
+		},
+	}
+});
+//navigation JS
 var thing = new Vue({
     el: 'header#pagehead',
     data: {
@@ -75,27 +89,22 @@ var thing = new Vue({
 	   menu_cpos: 0,
 	   menudisplay:'none', //CSS switch from none to block for menu container
 	   mobile: window.innerWidth >835 ? false: true,
-		 
-	  // boardstyles: {
-	//	'left': '0',
-	//	'display':'none'
-	//	},
 	   
 	},
     methods: {
 	    hovermenu: function (event) { //hovering buttons - open or move the menu
 		    if (!this.mobile){
 		    this.hovering = true;
-		   // console.log("Hovering on "+ event.target.getAttribute('data-menu'));
-		   if (!this.mobile){
-		    if (this.showing ===false){
-			   //Show menu here
-			   this.openmenu(event); 
-		    } else {
-			    //Menu is open, just move it.
-			   this.movemenu(event);
-		    }
-		    }
+		    // console.log("Hovering on "+ event.target.getAttribute('data-menu'));
+				if (!this.mobile){
+					if (this.showing ===false){
+					//Show menu here
+					this.openmenu(event); 
+					} else {
+						//Menu is open, just move it.
+					this.movemenu(event);
+					}
+				}
 		    }
 		},
 		hoverboard: function(event ){

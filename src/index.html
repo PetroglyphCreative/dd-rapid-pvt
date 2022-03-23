@@ -420,29 +420,30 @@
 	</div>
 
 	<!-- image gallery section -->
-	<div class="flex flex-col my-12">
+	<div class="flex flex-col my-12" id="gallery"><!-- Preserve this ID -->
 		<div class="xl:w-full md:mx-4 container-gallery xl:mr-auto xl:ml-auto">
-			<img src="./assets/img/big_img_01.jpg" alt="">
+			<img v-bind:src="targetImg" v-bind:alt="targetAlt" class="main"><!-- Preserve this Class -->
 		</div>
 		<div class="xl:w-full md:mx-4 container-gallery xl:mr-auto xl:ml-auto">
 			<div class="w-5/6 lg:w-full mr-auto ml-auto grid md:grid-cols-3 lg:grid-cols-4 auto-rows-fr gap-3 lg:gap-6 gallery place-items-center">
 				<div class="h-full place-self-center">
-					<img class="w-full" src="./assets/img/img_01.jpg" alt="Image">
+					<!-- set the src to a pre-rendered thumbnail. Set data-full to a larger feature-size version-->
+					<img class="w-full thumb" src="./assets/img/img_01.jpg" data-full="./assets/img/big_img_01.jpg" alt="Image"  v-on:click="selectImage">
 				</div>
 				<div class="h-full place-self-center">
-					<img class="w-full" src="./assets/img/img_02.jpg" alt="Image">
+					<img class="w-full thumb" src="./assets/img/img_02.jpg" data-full="./assets/img/img_02.jpg" alt="Image 2" v-on:click="selectImage">
 				</div>
 				<div class="h-full place-self-center">
-					<img class="w-full" src="./assets/img/img_03.jpg" alt="Image">
+					<img class="w-full thumb" src="./assets/img/img_03.jpg" data-full="./assets/img/img_03.jpg" alt="Image 3"  v-on:click="selectImage">
 				</div>
 				<div class="h-full place-self-center">
-					<img class="w-full" src="./assets/img/img_04.jpg" alt="Image">
+					<img class="w-full thumb" src="./assets/img/img_04.jpg" data-full="./assets/img/img_04.jpg" alt="Image 4" v-on:click="selectImage">
 				</div>
 				<div class="h-full place-self-center">
-					<img class="w-full" src="./assets/img/img_05.jpg" alt="Image">
+					<img class="w-full thumb" src="./assets/img/img_05.jpg" data-full="./assets/img/img_05.jpg" alt="Image 5"  v-on:click="selectImage">
 				</div>
 				<div class="h-full place-self-center">
-					<img class="w-full" src="./assets/img/img_06.jpg" alt="Image">
+					<img class="w-full thumb" src="./assets/img/img_06.jpg" data-full="./assets/img/img_06.jpg" alt="Image 6"  v-on:click="selectImage">
 				</div>
 			</div>
 		</div>

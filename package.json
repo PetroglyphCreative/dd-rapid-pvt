@@ -1,10 +1,10 @@
 {
-  "name": "Petroglyph-webpack-demo",
+  "name": "Aquarian-DigitalDesigns-RapidFire",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server  --mode development --hot --open --useLocalIp",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server  --mode development --hot --open ",
     "prod": "cross-env NODE_ENV=production webpack --no-progress"
   },
   "devDependencies": {
