@@ -689,10 +689,10 @@ footer li a {
   line-height: 26px;
 }
 .image {
-  background-image: url("https://via.placeholder.com/440x300/ccc/fff.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 300px;
+  max-height: 300px;
+  height: 100%;
+  max-width: 440px;
+  width: 100%;
 }
 .image2 {
   height:100%;
