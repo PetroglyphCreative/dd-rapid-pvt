@@ -29,7 +29,7 @@
 							<li class="primary_nav lg:flex lg:justify-center lg:w-3/4 xl:w-2/3 lg:ml-auto lg:mr-auto xl:mr-0 items-center" v-bind:class="{'block': m_showing, 'hidden': !m_showing}">
 								<a href="#" class="menu-title lg:px-4 py-3 lg:py-1 block lg:flex mr-auto ml-auto lg:m-0">Our Work</a>
 								<a href="#" class="menu-title lg:px-4 py-3 lg:py-1 block lg:flex mr-auto ml-auto lg:m-0">Services</a>
-								<button class="menu-title border-none pr-0 pl-0 py-3 lg:py-1 block lg:flex lg:mr-auto lg:ml-auto lg:m-0 text-left" v-on:mouseover.self="hovermenu" v-on:click.self="togglemenu" v-on:mouseout='hideboard' data-menu='menu-one' name="Company">Company<i class="text-blue-500 ml-1 lg:pr-4 fa fa-angle-down"></i></button>
+								<button class="menu-title border-none pr-0 pl-0 lg:pl-4 py-3 lg:py-1 block lg:flex lg:m-0 text-left" v-on:mouseover.self="hovermenu" v-on:click.self="togglemenu" v-on:mouseout='hideboard' data-menu='menu-one' name="Company">Company<i class="text-blue-500 ml-1 lg:pr-4 fa fa-angle-down"></i></button>
 								<div class="vertical-menu" data-nav='menu-one' data-menu-place='left' v-bind:style="{ display: display.one }">
 									<ul class="subnav">
 									
@@ -43,7 +43,7 @@
 								</div>
 								<a href="#" class="menu-title lg:px-4 py-3 lg:py-1 block lg:flex mr-auto ml-auto lg:m-0">Careers</a>
 								<a href="#" class="menu-title lg:px-4 py-3 lg:py-1 block lg:flex mr-auto ml-auto lg:m-0">Contact</a>
-								<button class="menu-title border-none pr-0 pl-0 py-3 lg:py-1 block lg:flex lg:mr-auto lg:ml-auto lg:m-0 text-left" v-on:mouseover.self="hovermenu" v-on:click.self="togglemenu" v-on:mouseout='hideboard' data-menu='menu-two' name="Acquisitions">Acquisitions<i class="text-blue-500 ml-1 lg:pr-4 fa fa-angle-down"></i></button>
+								<button class="menu-title border-none pr-0 pl-0 lg:pl-4 py-3 lg:py-1 block lg:flex lg:m-0 text-left" v-on:mouseover.self="hovermenu" v-on:click.self="togglemenu" v-on:mouseout='hideboard' data-menu='menu-two' name="Acquisitions">Acquisitions<i class="text-blue-500 ml-1 lg:pr-4 fa fa-angle-down"></i></button>
 								<div class="vertical-menu" data-nav='menu-two' data-menu-place='left' v-bind:style="{ display: display.two }">
 									<ul class="subnav">
 									
@@ -72,9 +72,7 @@
 	<div class="flex mb-4">
 		<div class="w-full banner-home banner-video-wrapper">
 			<div class="banner-video-overlay"></div>
-			<!-- add &playlist=hnp1pt8biD4 (the latter part being the video id) to force it to loop -->
-			<!-- found that Youtube's controls in the URL are preventing the video from displaying full width, so everything after the ? is what is doing it. Without those, no way to autoplay or loop or hide controls -->
-			<iframe src="https://www.youtube.com/embed/hnp1pt8biD4?autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&playsinline=1&start=03&mute=1" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe src='https://player.vimeo.com/video/697143196?background=1&amp;autoplay=1&amp;loop=1&amp;byline=0&amp;title=0' frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 			<div class="flex sm:items-center sm:justify-end bg-blue-500 banner-box">
 				<div class="text-white banner-text ml-4 sm:ml-0">
 					<h2 class="page-heading">Always Safe Always Prepared</h2>
@@ -880,7 +878,7 @@
 				<img src="./assets/img/person-image02.jpg" alt="person">
 				<div class="mr-auto ml-auto lg:mx-4 w-full md:w-2/3 xl:w-1/2 read">
 					<img src="/assets/img/quotes.svg" alt="green quotation mark"  width="30px" class="mt-8">
-					<blockquote class="mt mx-4 lg:mx-0">
+					<blockquote class="mt-2 mx-4 lg:mx-0">
 						<p>Our most valuable assets are our people. We are so grateful for the company culture that fosters growth and development. Pellentesque faucibus nisi in urna vulputate RFP. Nam id mauris non erat congue sagittis.</p>
 					</blockquote>
 					<p class="mx-4 lg:mx-0 quote">Jen Peterson <br/><span class="uppercase">HR - Rapid Fire Protection, Inc.</span></p>

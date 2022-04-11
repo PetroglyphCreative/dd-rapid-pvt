@@ -21756,6 +21756,9 @@ th{
   background-size: auto;
   background-repeat: no-repeat;
   min-height: 185px;
+  --bg-opacity: 1;
+  background-color: #F6F6F6;
+  background-color: rgba(246, 246, 246, var(--bg-opacity));
 }
 
 .mark ul li {
@@ -22147,7 +22150,7 @@ a.btn-cta {
 }
 
 .job-btn:hover {
-  box-shadow: none;
+  box-shadow: 0 0.125rem 2rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .job-btn p {
@@ -22279,7 +22282,8 @@ input[type='text'], textarea {
           appearance: none;
   width: 100%;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   padding-left: 1rem;
   padding-right: 1rem;
   --text-opacity: 1;
@@ -22301,6 +22305,16 @@ input[type='checkbox']{
   --bg-opacity: 1;
   background-color: #700A07;
   background-color: rgba(112, 10, 7, var(--bg-opacity));
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+input[type='checkbox']:first-of-type {
+  margin-top: 1rem;
+}
+
+input[type='checkbox']:last-of-type {
+  margin-bottom: 1.5rem;
 }
 
 input.error {
@@ -22341,6 +22355,7 @@ select{
   --text-opacity: 1;
   color: #666666;
   color: rgba(102, 102, 102, var(--text-opacity));
+  margin-bottom: 0.75rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 1rem;
@@ -22729,7 +22744,7 @@ a.skip-main:focus, a.skip-main:active {
   font-size: 20px;
   position: relative;
   top: 4px;
-  margin-right: .25rem;
+  margin-right: .5rem;
 }
 
 .phone:before{
@@ -23261,17 +23276,16 @@ footer li a {
 
   .banner-video-wrapper {
     position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
-    height: 0;
-    max-width: 100%;
-    margin: 0 auto -16.25%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
     pointer-events: none;
   }
 
   .banner-video-overlay {
     background-color:rgba(0, 44, 88, .65);
-    z-index: 2;
+    z-index: 1;
     width: 100vw;
     height: 630px;
     position: absolute;
@@ -23280,19 +23294,21 @@ footer li a {
   }
 
   .banner-video-wrapper iframe, .banner-video-wrapper video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    max-height: 630px;
     display: block;
-  }
-
-  .banner-box {
     position: absolute;
-    top: 220px;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    min-height: 630px;
+    min-width: 177.77vh;
+    transform: translate(-50%, -50%);
   }
+}
+
+.banner-box {
+  position: relative;
+  top: 200px;
 }
 
 .videoWrapper {
