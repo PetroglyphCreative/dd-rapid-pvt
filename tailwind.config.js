@@ -1,4 +1,7 @@
 module.exports = {
+	purge: [
+		'./src/*.html',
+	  ],
   theme: {
 	fontFamily: {
       'display': ['Proxima Nova', 'sans-serif'],

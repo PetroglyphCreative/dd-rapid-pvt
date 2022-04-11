@@ -22046,12 +22046,16 @@ button.btn-lg{
 .btn-cta{
   border-width: 1px;
   letter-spacing: .4pt;
+  max-width: 286px;
+  text-align: center;
   font-family: Proxima Nova, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   --bg-opacity: 1;
   background-color: #0d559c;
   background-color: rgba(13, 85, 156, var(--bg-opacity));
@@ -22070,6 +22074,9 @@ button.btn-lg{
   --text-opacity: 1;
   color: #0d559c;
   color: rgba(13, 85, 156, var(--text-opacity));
+  --border-opacity: 1;
+  border-color: #0d559c;
+  border-color: rgba(13, 85, 156, var(--border-opacity));
 }
 
 .btn-cta.btn-lg{
@@ -22080,6 +22087,10 @@ button.btn-lg{
   font-size:18px;
   line-height:32px;
   font-family: "Open Sans", sans-serif;
+}
+
+a.btn-cta {
+  display: block;
 }
 
 .btn-svc{
@@ -22124,6 +22135,10 @@ button.btn-lg{
   margin-bottom: 2rem;
 }
 
+.svc-cta-box .btn-cta {
+  margin: 0;
+}
+
 .job-btn {
   background-color: white;
   padding: 1rem 2rem;
@@ -22162,6 +22177,10 @@ button.btn-lg{
 
 .breadcrumb .active{
   font-weight: 700;
+}
+
+.breadcrumb a {
+  color: white;
 }
 
 .menu-title {
@@ -22220,12 +22239,23 @@ button.btn-lg{
 }
 
 .card-title:hover{
-  --text-opacity: 1;
-  color: #fff;
-  color: rgba(255, 255, 255, var(--text-opacity));
   --bg-opacity: 1;
   background-color: #06a350;
   background-color: rgba(6, 163, 80, var(--bg-opacity));
+}
+
+.card-title p:hover {
+  color: white;
+}
+
+.card a {
+  display: block;
+}
+
+a.arrow-links:hover {
+  --text-opacity: 1;
+  color: #0d559c;
+  color: rgba(13, 85, 156, var(--text-opacity));
 }
 
 .error-msg{
@@ -22476,10 +22506,8 @@ p.toobig{ min-width:91px;
 .read ul {
   max-width: 36rem;
   margin: 1rem;
-  font-size:18px;
-  line-height:32px;
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.375;
+  font-size: 1rem;
+  line-height: 1;
   list-style-type: disc;
   max-width:620px;
 }
@@ -22697,6 +22725,13 @@ a.skip-main:focus, a.skip-main:active {
   text-rendering: auto;
 }
 
+.phone, .fa-envelope {
+  font-size: 20px;
+  position: relative;
+  top: 4px;
+  margin-right: .25rem;
+}
+
 .phone:before{
   content:"\F879";
 }
@@ -22717,13 +22752,6 @@ a.skip-main:focus, a.skip-main:active {
   font-size: 18px;
 }
 
-.states i.phone {
-  font-size: 20px;
-  position: relative;
-  top: 4px;
-  margin-right: .25rem;
-}
-
 .careers p {
   padding: 0;
   margin: 0;
@@ -22735,7 +22763,7 @@ a.skip-main:focus, a.skip-main:active {
 }
 
 .card {
-  max-width: 24rem;
+  max-width:407px;
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
@@ -22823,6 +22851,8 @@ blockquote footer a {
 
 .quote {
   font-style: normal;
+  font-family: Proxima Nova, sans-serif;
+  font-weight: 600;
 }
 
 footer p {
@@ -23231,13 +23261,12 @@ footer li a {
 
   .banner-video-wrapper {
     position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    max-width: 100%;
+    margin: 0 auto -16.25%;
     pointer-events: none;
-    overflow: hidden;
   }
 
   .banner-video-overlay {
@@ -23251,13 +23280,18 @@ footer li a {
   }
 
   .banner-video-wrapper iframe, .banner-video-wrapper video {
-    display: block;
-    z-index:  1;
-    width: 100vw;
-    height: 630px;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 630px;
+    display: block;
+  }
+
+  .banner-box {
+    position: absolute;
+    top: 220px;
   }
 }
 

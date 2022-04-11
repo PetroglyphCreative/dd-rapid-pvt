@@ -309,13 +309,18 @@ button.btn-lg{
 .btn-cta{
   border-width: 1px;
   letter-spacing: .4pt;
-	@apply font-display font-normal py-4 px-6 bg-blue-500 text-white border-white;
+  max-width: 286px;
+  text-align: center;
+	@apply font-display font-semibold py-4 px-6 my-4 bg-blue-500 text-white border-white;
 }
 .btn-cta:hover{
-	@apply bg-white text-blue-500 ;
+	@apply bg-white text-blue-500 border-blue-500;
 }
 .btn-cta.btn-lg{
 	@apply py-4 px-10 text-large;
+}
+a.btn-cta {
+  @apply block;
 }
 .btn-svc{
   font-size: 18px;
@@ -329,6 +334,9 @@ button.btn-lg{
 }
 .svc-cta-box {
   @apply bg-blue-500 py-4 px-6 mb-8;
+}
+.svc-cta-box .btn-cta {
+  margin: 0;
 }
 .job-btn {
   background-color: white;
@@ -354,6 +362,9 @@ button.btn-lg{
 }
 .breadcrumb .active{
   @apply font-bold;
+}
+.breadcrumb a {
+  color: white;
 }
 .menu-title {
   font-size: 18px;
@@ -382,7 +393,16 @@ button.btn-lg{
   margin:0;
 }
 .card-title:hover{
-  @apply text-white bg-green-500;
+  @apply bg-green-500;
+}
+.card-title p:hover {
+  color: white;
+}
+.card a {
+  display: block;
+}
+a.arrow-links:hover {
+  @apply text-blue-500;
 }
 .error-msg{
 	@apply text-red-500 text-xs italic
@@ -443,7 +463,7 @@ p.toobig{ min-width:91px;}
 .read h5 {@apply heading-xxs my-2;}
 .read figure { @apply ml-auto mr-auto my-2;}
 .read ul {
-   @apply  max-w-xl m-4 text-large leading-snug list-disc;
+   @apply  max-w-xl m-4 text-base leading-none list-disc;
    max-width:620px;
 }
 .read blockquote p{
@@ -583,6 +603,12 @@ a.skip-main:focus, a.skip-main:active {
   line-height: 1;
   text-rendering: auto;
 }
+.phone, .fa-envelope {
+  font-size: 20px;
+  position: relative;
+  top: 4px;
+  margin-right: .5rem;
+}
 .phone:before{
   content:"\f879";
 }
@@ -599,12 +625,6 @@ a.skip-main:focus, a.skip-main:active {
   margin-left: .65rem;
   font-size: 18px;
 }
-.states i.phone {
-  font-size: 20px;
-  position: relative;
-  top: 4px;
-  margin-right: .25rem;
-}
 .careers p {
   padding: 0;
   margin: 0;
@@ -614,7 +634,8 @@ a.skip-main:focus, a.skip-main:active {
   font-size: 18px;
 }
 .card {
-	@apply max-w-sm overflow-hidden mr-auto ml-auto mb-8;
+  max-width:407px;
+	@apply overflow-hidden mr-auto ml-auto mb-8;
 }
 .card img {
 	@apply w-full;
@@ -654,6 +675,7 @@ blockquote footer a {
 }
 .quote {
   font-style: normal;
+  @apply font-display font-semibold;
 }
 footer p {
   margin: 0;
@@ -986,13 +1008,12 @@ footer li a {
   }
   .banner-video-wrapper {
     position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    max-width: 100%;
+    margin: 0 auto -16.25%;
     pointer-events: none;
-    overflow: hidden;
   }
   .banner-video-overlay {
     background-color:rgba(0, 44, 88, .65);
@@ -1004,13 +1025,17 @@ footer li a {
     left: 0;
   }
   .banner-video-wrapper iframe, .banner-video-wrapper video {
-    display: block;
-    z-index:  1;
-    width: 100vw;
-    height: 630px;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 630px;
+    display: block;
+  }
+  .banner-box {
+    position: absolute;
+    top: 220px;
   }
 }
 .videoWrapper {

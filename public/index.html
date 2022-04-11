@@ -70,9 +70,10 @@
 
 	<!-- Homepage banner -->
 	<div class="flex mb-4">
-		<div class="w-full banner-home banner-video-wrapper flex items-center">
-			<div class="video-overlay"></div>
+		<div class="w-full banner-home banner-video-wrapper">
+			<div class="banner-video-overlay"></div>
 			<!-- add &playlist=hnp1pt8biD4 (the latter part being the video id) to force it to loop -->
+			<!-- found that Youtube's controls in the URL are preventing the video from displaying full width, so everything after the ? is what is doing it. Without those, no way to autoplay or loop or hide controls -->
 			<iframe src="https://www.youtube.com/embed/hnp1pt8biD4?autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&playsinline=1&start=03&mute=1" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<div class="flex sm:items-center sm:justify-end bg-blue-500 banner-box">
 				<div class="text-white banner-text ml-4 sm:ml-0">
@@ -83,7 +84,6 @@
 			</div>
 		</div>
 	</div>
-
 	<!-- Homepage heading section with specific page links -->
 	<div class="flex mark mb-4" id='main'>
 		<div class="w-full container-main mt-4 mb-8 mr-auto ml-auto">
@@ -265,7 +265,7 @@
 			</div>
 		</div>
 		<div class="w-5/6 my-8 mx-4 sm:mx-6 container-main md:mr-auto md:ml-auto md:text-center">
-			<a href="" class="uppercase text-base">View All Industries <i class="fa fa-angle-right text-blue-500"></i></a>
+			<a href="" class="uppercase arrow-links">View All Industries <i class="fa fa-angle-right text-blue-500"></i></a>
 		</div>
 	</div>
 
@@ -275,7 +275,7 @@
 	<div class="flex flex-col my-12">
 		<div class="w-full bg-green-500">
 			<div class="container-main w-5/6 xl:w-full ml-auto mr-auto my-4">
-				<p><span class="breadcrumb">Industries | <span class="active">Healthcare</span></span></p>
+				<p><span class="breadcrumb"><a href="#">Industries</a> | <span class="active">Healthcare</span></span></p>
 			</div>
 		</div>
 		<div class="w-full detail-banner py-12">
@@ -304,7 +304,7 @@
 
 	<!-- Industries detail cards -->
 	<div class="flex flex-col my-12">
-		<div class="xl:w-full md:mx-4 container-main xl:mr-auto xl:ml-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-6 mt-4">
+		<div class="xl:w-full md:mx-4 container-main xl:mr-auto xl:ml-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-8 mt-4">
 			<div class="flex-grab ml-auto mr-auto">
 				<a href="#">
 					<div class="card">
@@ -412,7 +412,7 @@
 	<div class="flex my-12 w-5/6 mr-auto ml-auto">
 		<div class="mr-auto ml-auto w-full md:w-2/3 xl:w-1/2 read">
 			<img src="/assets/img/quotes.svg" alt="green quotation mark"  width="30px">
-			<blockquote class="mx-4 lg:mx-0">
+			<blockquote class="mt-2 mx-4 lg:mx-0">
 				<p>I'm extremely grateful to be working at RFP, ut consequat odio ultricies sed. Pellentesque faucibus nisi in urna vulputate convallis. Nunc nec mauris ut tortor dignissim consectetur. Suspendisse malesuada ante a congue porta. Nam id mauris non erat congue sagittis. Morbi accumsan, turpis quis gravida convallis, libero lacus accumsan metus, nec imperdiet ligula eros in ipsum. Nunc nec mauris ut tortor dignissim consectetur.</p>
 			</blockquote>
 			<p class="mx-4 lg:mx-0 quote">Aaron King <br/><span class="uppercase">Project Manager</span></p>
@@ -591,10 +591,10 @@
 							<img src="./assets/img/person-image.jpg" alt="person image">
 							<div class="px-6 py-4 bg-white">
 								<h4 class="">Todd Sweet</h4>
-								<h5>Regional Manager</h5>
+								<h5 class="text-green-500">Regional Manager</h5>
 								<div class="mt-2 mb-8">
-									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+									<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+									<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 								</div>
 							</div>
 						</div>
@@ -606,10 +606,10 @@
 							<img src="./assets/img/person-image.jpg" alt="person image">
 							<div class="px-6 py-4 bg-white">
 								<h4 class="">Todd Sweet</h4>
-								<h5>Regional Manager</h5>
+								<h5 class="text-green-500">Regional Manager</h5>
 								<div class="mt-2 mb-8">
-									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+									<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+									<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 								</div>
 							</div>
 						</div>
@@ -621,10 +621,10 @@
 							<img src="./assets/img/person-image.jpg" alt="person image">
 							<div class="px-6 py-4 bg-white">
 								<h4 class="">Todd Sweet</h4>
-								<h5>Regional Manager</h5>
+								<h5 class="text-green-500">Regional Manager</h5>
 								<div class="mt-2 mb-8">
-									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+									<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+									<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 								</div>
 							</div>
 						</div>
@@ -636,10 +636,10 @@
 							<img src="./assets/img/person-image.jpg" alt="person image">
 							<div class="px-6 py-4 bg-white">
 								<h4 class="">Todd Sweet</h4>
-								<h5>Regional Manager</h5>
+								<h5 class="text-green-500">Regional Manager</h5>
 								<div class="mt-2 mb-8">
-									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+									<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+									<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 								</div>
 							</div>
 						</div>
@@ -651,10 +651,10 @@
 							<img src="./assets/img/person-image.jpg" alt="person image">
 							<div class="px-6 py-4 bg-white">
 								<h4 class="">Todd Sweet</h4>
-								<h5>Regional Manager</h5>
+								<h5 class="text-green-500">Regional Manager</h5>
 								<div class="mt-2 mb-8">
-									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+									<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+									<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 								</div>
 							</div>
 						</div>
@@ -666,10 +666,10 @@
 							<img src="./assets/img/person-image.jpg" alt="person image">
 							<div class="px-6 py-4 bg-white">
 								<h4 class="">Todd Sweet</h4>
-								<h5>Regional Manager</h5>
+								<h5 class="text-green-500">Regional Manager</h5>
 								<div class="mt-2 mb-8">
-									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+									<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+									<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 								</div>
 							</div>
 						</div>
@@ -681,10 +681,10 @@
 							<img src="./assets/img/person-image.jpg" alt="person image">
 							<div class="px-6 py-4 bg-white">
 								<h4 class="">Todd Sweet</h4>
-								<h5>Regional Manager</h5>
+								<h5 class="text-green-500">Regional Manager</h5>
 								<div class="mt-2 mb-8">
-									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+									<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+									<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 								</div>
 							</div>
 						</div>
@@ -696,10 +696,10 @@
 							<img src="./assets/img/person-image.jpg" alt="person image">
 							<div class="px-6 py-4 bg-white">
 								<h4 class="">Todd Sweet</h4>
-								<h5>Regional Manager</h5>
+								<h5 class="text-green-500">Regional Manager</h5>
 								<div class="mt-2 mb-8">
-									<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-									<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+									<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+									<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 								</div>
 							</div>
 						</div>
@@ -779,7 +779,7 @@
 						<h3 class="heading-xxs text-blue-500 uppercase">Aurora Team</h3>
 						<p>1650 Jasper Street, Unit H<br/>
 							Aurora, CO</p>
-						<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone text-gray-500"></i>&nbsp; 720-325-5696</a></span>
+						<a href="tel:720-325-5696" class="text-small text-gray-900"><i class="phone text-gray-500"></i>720-325-5696</a>
 					</div>
 					<div class="sm:w-full lg:w-3/4 md:ml-auto md:mr-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-6 mt-4 mx-4 xl:mx-0">
 						<div class="flex-grab  ml-auto mr-auto">
@@ -788,10 +788,10 @@
 									<img src="./assets/img/person-image.jpg" alt="person image">
 									<div class="px-6 py-4 bg-white">
 										<h4 class="">Todd Sweet</h4>
-										<h5>Regional Manager</h5>
+										<h5 class="text-green-500">Regional Manager</h5>
 										<div class="mt-2 mb-8">
-											<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-											<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+											<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+											<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 										</div>
 									</div>
 								</div>
@@ -803,10 +803,10 @@
 									<img src="./assets/img/person-image.jpg" alt="person image">
 									<div class="px-6 py-4 bg-white">
 										<h4 class="">Todd Sweet</h4>
-										<h5>Regional Manager</h5>
+										<h5 class="text-green-500">Regional Manager</h5>
 										<div class="mt-2 mb-8">
-											<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-											<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+											<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+											<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 										</div>
 									</div>
 								</div>
@@ -818,10 +818,10 @@
 									<img src="./assets/img/person-image.jpg" alt="person image">
 									<div class="px-6 py-4 bg-white">
 										<h4 class="">Todd Sweet</h4>
-										<h5>Regional Manager</h5>
+										<h5 class="text-green-500">Regional Manager</h5>
 										<div class="mt-2 mb-8">
-											<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-											<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+											<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+											<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 										</div>
 									</div>
 								</div>
@@ -834,7 +834,7 @@
 						<h3 class="heading-xxs text-blue-500 uppercase">Colorado Springs Team</h3>
 						<p>2395 Briargate Boulevard<br/>
 							Colorado Springs, CO</p>
-						<span class="text-small text-gray-900"><a href="tel:719-534-0548"><i class="phone text-gray-500"></i>&nbsp; 719-534-0548</a></span>
+						<a href="tel:719-534-0548" class="text-small text-gray-900"><i class="phone text-gray-500"></i>719-534-0548</a>
 					</div>
 					<div class="sm:w-full lg:w-3/4 md:ml-auto md:mr-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:auto-rows-fr md:gap-6 mt-4 mx-4 xl:mx-0">
 						<div class="flex-grab  ml-auto mr-auto">
@@ -843,10 +843,10 @@
 									<img src="./assets/img/person-image.jpg" alt="person image">
 									<div class="px-6 py-4 bg-white">
 										<h4 class="">Todd Sweet</h4>
-										<h5>Regional Manager</h5>
+										<h5 class="text-green-500">Regional Manager</h5>
 										<div class="mt-2 mb-8">
-											<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-											<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+											<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+											<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 										</div>
 									</div>
 								</div>
@@ -858,10 +858,10 @@
 									<img src="./assets/img/person-image02.jpg" alt="person image">
 									<div class="px-6 py-4 bg-white">
 										<h4 class="">Carrie Oakey</h4>
-										<h5>Colorado Sales Manager</h5>
+										<h5 class="text-green-500">Colorado Sales Manager</h5>
 										<div class="mt-2 mb-8">
-											<span class="text-small text-gray-900"><a href="tel:720-325-5696"><i class="phone"></i>&nbsp; 720-325-5696</a></span><br/>
-											<span class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>&nbsp; Email</span>
+											<a href="tel:720-325-5696" class="text-small text-gray-900 mb-2"><i class="phone text-gray-500"></i>720-325-5696</a>
+											<a href="mailto:#" class="text-small text-gray-900"><i class="fa fa-solid fa-envelope text-gray-500"></i>Email</a>
 										</div>
 									</div>
 								</div>
@@ -933,7 +933,7 @@
 			<div class="w-5/6 xl:w-2/5 mr-auto ml-auto mt-8 xl:mt-0 xl:pl-6">
 				<div class="flex flex-row justify-between pb-4 border-b-2 border-blue-500">
 					<h4 class="text-blue-500 uppercase heading-xxs">More News</h4>
-					<a href="" class="uppercase text-base">View All Articles <i class="fa fa-angle-right text-blue-500" aria-hidden="true"></i></a>
+					<a href="" class="uppercase text-base arrow-links">View All Articles <i class="fa fa-angle-right text-blue-500" aria-hidden="true"></i></a>
 				</div>
 				<ul class="flex flex-col">
 					<li class="border-b-1 border-gray-500 py-6 mb-4"><a href="" class="heading-s">Joe Headrick Wins National Competition</a></li>
