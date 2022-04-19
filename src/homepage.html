@@ -18,7 +18,7 @@
 					<nav class="block pt-2">
 						<ul class="block lg:flex lg:flex-wrap xl:flex-no-wrap  xl:items-stretch xl:justify-between ">
 							<li class="flex text-center lg:text-left w-full lg:w-1/4 xl:w-1/3 justify-between" >
-							<a href="/"><img src="./assets/img/rapidfire-logo.png" alt=""></a>
+							<a href="/" class="ml-4 xl:ml-0"><img src="./assets/img/rapidfire-logo.png" alt="" class="logo"></a>
 			
 								<a class="menu-toggle lg:hidden  align-top h-12" id='mobileMenuToggle' v-on:click="openMobileMenuContainer"  v-bind:class="{ 'change': m_showing}">
 								  <div class="bar1"></div>
@@ -27,9 +27,9 @@
 								</a>
 							  </li>
 							<li class="primary_nav lg:flex lg:justify-center lg:w-3/4 xl:w-2/3 lg:ml-auto lg:mr-auto xl:mr-0 items-center" v-bind:class="{'block': m_showing, 'hidden': !m_showing}">
-								<a href="#" class="menu-title lg:px-4 py-3 lg:py-1 block lg:flex mr-auto ml-auto lg:m-0">Our Work</a>
-								<a href="#" class="menu-title lg:px-4 py-3 lg:py-1 block lg:flex mr-auto ml-auto lg:m-0">Services</a>
-								<button class="menu-title border-none pr-0 pl-0 py-3 lg:py-1 block lg:flex lg:mr-auto lg:ml-auto lg:m-0 text-left" v-on:mouseover.self="hovermenu" v-on:click.self="togglemenu" v-on:mouseout='hideboard' data-menu='menu-one' name="Company">Company<i class="text-blue-500 ml-1 lg:pr-4 fa fa-angle-down"></i></button>
+								<a href="#" class="menu-title lg:px-3 xl:px-4 py-3 lg:py-1 block lg:flex ml-6 lg:mr-auto lg:ml-auto lg:m-0">Our Work</a>
+								<a href="#" class="menu-title lg:px-3 xl:px-4 py-3 lg:py-1 block lg:flex ml-6 lg:mr-auto lg:ml-auto lg:m-0">Services</a>
+								<button class="menu-title border-none ml-6 lg:ml-0 px-0 lg:pl-3 xl:pl-4 py-3 lg:py-1 block lg:flex lg:m-0 text-left" v-on:mouseover.self="hovermenu" v-on:click.self="togglemenu" v-on:mouseout='hideboard' data-menu='menu-one' name="Company">Company<i class="text-blue-500 ml-1 lg:pr-4 fa fa-angle-down"></i></button>
 								<div class="vertical-menu" data-nav='menu-one' data-menu-place='left' v-bind:style="{ display: display.one }">
 									<ul class="subnav">
 									
@@ -41,9 +41,9 @@
 									
 									</ul>
 								</div>
-								<a href="#" class="menu-title lg:px-4 py-3 lg:py-1 block lg:flex mr-auto ml-auto lg:m-0">Careers</a>
-								<a href="#" class="menu-title lg:px-4 py-3 lg:py-1 block lg:flex mr-auto ml-auto lg:m-0">Contact</a>
-								<button class="menu-title border-none pr-0 pl-0 py-3 lg:py-1 block lg:flex lg:mr-auto lg:ml-auto lg:m-0 text-left" v-on:mouseover.self="hovermenu" v-on:click.self="togglemenu" v-on:mouseout='hideboard' data-menu='menu-two' name="Acquisitions">Acquisitions<i class="text-blue-500 ml-1 lg:pr-4 fa fa-angle-down"></i></button>
+								<a href="#" class="menu-title lg:px-3 xl:px-4 py-3 lg:py-1 block lg:flex ml-6 lg:mr-auto lg:ml-auto lg:m-0">Careers</a>
+								<a href="#" class="menu-title lg:px-3 xl:px-4 py-3 lg:py-1 block lg:flex ml-6 lg:mr-auto lg:ml-auto lg:m-0">Contact</a>
+								<button class="menu-title border-none ml-6 lg:ml-0 px-0 lg:pl-3 xl:pl-4 py-3 lg:py-1 block lg:flex lg:m-0 text-left" v-on:mouseover.self="hovermenu" v-on:click.self="togglemenu" v-on:mouseout='hideboard' data-menu='menu-two' name="Acquisitions">Acquisitions<i class="text-blue-500 ml-1 lg:pr-4 fa fa-angle-down"></i></button>
 								<div class="vertical-menu" data-nav='menu-two' data-menu-place='left' v-bind:style="{ display: display.two }">
 									<ul class="subnav">
 									
@@ -74,11 +74,11 @@
 			<div class="video-overlay"></div>
 			<!-- add &playlist=hnp1pt8biD4 (the latter part being the video id) to force it to loop -->
 			<iframe src='https://player.vimeo.com/video/697143196?background=1&amp;autoplay=1&amp;loop=1&amp;byline=0&amp;title=0' frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-			<div class="flex sm:items-center sm:justify-end bg-blue-500 banner-box">
-				<div class="text-white banner-text ml-4 sm:ml-0">
+			<div class="flex sm:items-center justify-center xl:justify-end bg-blue-500 banner-box">
+				<div class="text-white banner-text">
 					<h2 class="page-heading">Always Safe Always Prepared</h2>
-					<p class="font-semibold">Industry-leading fire protection solutions you can trust</p>
-					<p class="uppercase font-semibold pt-2">Learn more <i class="fa fa-angle-right"></i></p>
+					<p>Industry-leading fire protection solutions you can trust</p>
+					<p class="uppercase pt-2">Learn more <i class="fa fa-angle-right"></i></p>
 				</div>
 			</div>
 		</div>
@@ -87,13 +87,13 @@
 	<!-- Homepage heading section with specific page links -->
 	<div class="flex mark mb-4" id='main'>
 		<div class="w-full container-main mt-4 mb-8 mr-auto ml-auto">
-			<div class="flex flex-col lg:flex-row">
-				<div class="w-5/6 lg:w-3/5 ml-4 sm:ml-8 xl:ml-0">
-					<h1 class="font-display heading-xs sm:page-heading uppercase text-gray-900 font-bold mt-5 mb-5">Fire Protection Systems & Services</h1>
+			<div class="w-5/6 mr-auto ml-auto flex flex-col lg:flex-row mt-12">
+				<div class="w-full mr-auto ml-auto lg:w-3/5">
+					<h1 class="font-display heading-xs sm:page-heading uppercase text-gray-900 font-bold mb-5">Fire Protection Systems & Services</h1>
 					<p>From commerical and industrial projects to multi-family residential buildings, our certified fire protection specialists design, install, and service fire systems that protect lives and property.</p>
 				</div>
-				<div class="w-5/6 lg:w-2/5 flex ml-4 xl:ml-0">
-					<ul class="flex flex-col xl:flex-row lg:flex-wrap sm:pl-4 xl:pl-0 mt-6">
+				<div class="w-full lg:w-2/5 flex mr-auto ml-auto xl:ml-0">
+					<ul class="flex flex-col xl:flex-row lg:flex-wrap md:mt-6 lg:mt-2">
 						<li><a href="" class="btn-svc">Fire Suppression Systems</a></li>
 						<li><a href="" class="btn-svc">Design & Engineering</a></li>
 						<li><a href="" class="btn-svc">Fire Alarm & Security</a></li>

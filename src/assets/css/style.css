@@ -63,16 +63,22 @@ th{
   min-height: 630px;
 }
 .banner-box {
+  position: relative;
+  top: 200px;
   opacity: 0.93;
-  max-width: 718px;
   width: 100%;
-  padding: 2.5rem 2.5rem 2.5rem 0;
+  padding: 2.5rem;
   z-index: 3;
 }
 .banner-text{
   max-width: 330px;
   width: 100%;
-  padding-right: 3rem;
+  padding: 1.5rem;
+}
+.banner-text p {
+  font-size: 18px;
+  line-height: 25px;
+  @apply font-display font-semibold;
 }
 .banner-text .fa-angle-right:before{
   position: relative;
@@ -164,7 +170,7 @@ th{
 	@apply font-body;
 }
 .arrow-links {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: .6pt;
   font-weight: 600;
@@ -310,9 +316,8 @@ button.btn-lg{
 .btn-cta{
   border-width: 1px;
   letter-spacing: .4pt;
-  max-width: 286px;
   text-align: center;
-	@apply font-display font-semibold py-4 px-6 my-4 bg-blue-500 text-white border-white;
+	@apply font-display font-semibold py-4 px-6 bg-blue-500 text-white border-white;
 }
 .btn-cta:hover{
 	@apply bg-white text-blue-500 border-blue-500;
@@ -394,7 +399,7 @@ a.btn-cta {
   margin:0;
 }
 .card-title:hover{
-  @apply bg-green-500;
+  @apply bg-green-500 text-white;
 }
 .card-title p:hover {
   color: white;
@@ -495,7 +500,7 @@ header nav .vertical-menu a {
   float:right;
   @apply border rounded px-2 py-1;
 }
-img.logo {width:85%; max-width:300px;}
+img.logo {width:85%; max-width:250px;}
 .bar1, .bar2, .bar3 {
   width: 30px;
   height: 4px;
@@ -660,7 +665,10 @@ a .card h5 {
   @apply text-green-500 font-body font-semibold;
 }
 a .card p{
-	@apply text-gray-900 ;
+	@apply text-gray-900;
+}
+.industry p {
+  @apply text-small my-4;
 }
 .card.dark{
 	@apply text-white bg-gray-800;
@@ -756,7 +764,7 @@ footer li a {
 /*----- TIMELINE INFO -----*/
 .timeline-info {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.4pt;
   margin: 0 0 0.5em 0;
   text-transform: uppercase;
@@ -945,10 +953,16 @@ footer li a {
     width:100%;
   }
 }
-/*
+
 @media (min-width:640px) {
-  .sm\:thing{}
-} */
+  .sm\:page-heading{
+    font-size:32px;
+    line-height:32px;
+    letter-spacing:.24pt;
+    font-weight:600;
+    @apply font-display;
+  }
+}
 
 @media (min-width:768px) {
   /* .md\:thing {} */
@@ -972,6 +986,13 @@ footer li a {
   }
 } 
 @media (min-width:1024px) {
+  .btn-cta{
+    max-width: 286px;
+    @apply my-4;
+  }
+  .arrow-links {
+    font-size: 16px;
+  }
   .card-title {
     min-height:auto;
   }
@@ -994,6 +1015,7 @@ footer li a {
 }
 /* because tablets */
 @media (min-width:1025px) {
+  img.logo {width:100%;}
   .container-main {
     max-width: 1290px;
   }
@@ -1020,6 +1042,7 @@ footer li a {
     height: 100%;
     z-index: -1;
     pointer-events: none;
+    overflow: hidden;
   }
   .banner-video-overlay {
     background-color:rgba(0, 44, 88, .65);
@@ -1036,15 +1059,18 @@ footer li a {
     top: 50%;
     left: 50%;
     width: 100vw;
-    height: 100%;
-    min-height: 630px;
+    height: 56.25vw;
+    min-height: 100vh;
     min-width: 177.77vh;
     transform: translate(-50%, -50%);
   }
-}
-.banner-box {
-  position: relative;
-  top: 200px;
+  .banner-box {
+    max-width: 718px;
+    padding: 2.5rem 2.5rem 2.5rem 0;
+  }
+  .banner-text {
+    padding-right: 3rem;
+  }
 }
 .videoWrapper {
   position: relative;

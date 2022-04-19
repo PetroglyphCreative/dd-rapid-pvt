@@ -1280,6 +1280,10 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
@@ -1338,6 +1342,11 @@ video {
 
 .p-8 {
   padding: 2rem;
+}
+
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .px-1 {
@@ -1637,6 +1646,10 @@ video {
   gap: 1.5rem;
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .auto-rows-fr {
   grid-auto-rows: minmax(0, 1fr);
 }
@@ -1749,17 +1762,25 @@ th{
 }
 
 .banner-box {
+  position: relative;
+  top: 200px;
   opacity: 0.93;
-  max-width: 718px;
   width: 100%;
-  padding: 2.5rem 2.5rem 2.5rem 0;
+  padding: 2.5rem;
   z-index: 3;
 }
 
 .banner-text{
   max-width: 330px;
   width: 100%;
-  padding-right: 3rem;
+  padding: 1.5rem;
+}
+
+.banner-text p {
+  font-size: 18px;
+  line-height: 25px;
+  font-family: Proxima Nova, sans-serif;
+  font-weight: 600;
 }
 
 .banner-text .fa-angle-right:before{
@@ -1874,7 +1895,7 @@ th{
 }
 
 .arrow-links {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: .6pt;
   font-weight: 600;
@@ -2072,7 +2093,6 @@ button.btn-lg{
 .btn-cta{
   border-width: 1px;
   letter-spacing: .4pt;
-  max-width: 286px;
   text-align: center;
   font-family: Proxima Nova, sans-serif;
   font-weight: 600;
@@ -2080,8 +2100,6 @@ button.btn-lg{
   padding-bottom: 1rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   --bg-opacity: 1;
   background-color: #0d559c;
   background-color: rgba(13, 85, 156, var(--bg-opacity));
@@ -2268,6 +2286,9 @@ a.btn-cta {
   --bg-opacity: 1;
   background-color: #06a350;
   background-color: rgba(6, 163, 80, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
 }
 
 .card-title p:hover {
@@ -2590,7 +2611,7 @@ header nav .vertical-menu a {
 }
 
 img.logo {
-  width:85%; max-width:300px;
+  width:85%; max-width:250px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -2841,6 +2862,16 @@ a .card p{
   color: rgba(45, 45, 45, var(--text-opacity));
 }
 
+.industry p {
+  font-size:14px;
+  letter-spacing: .1pt;
+  line-height:18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .card.dark{
   --text-opacity: 1;
   color: #fff;
@@ -2988,7 +3019,7 @@ footer li a {
 
 .timeline-info {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.4pt;
   margin: 0 0 0.5em 0;
   text-transform: uppercase;
@@ -3211,10 +3242,15 @@ footer li a {
   }
 }
 
-/*
 @media (min-width:640px) {
-  .sm\:thing{}
-} */
+  .sm\:page-heading{
+    font-size:32px;
+    line-height:32px;
+    letter-spacing:.24pt;
+    font-weight:600;
+    font-family: Proxima Nova, sans-serif;
+  }
+}
 
 @media (min-width:768px) {
   /* .md\:thing {} */
@@ -3245,6 +3281,16 @@ footer li a {
 }
 
 @media (min-width:1024px) {
+  .btn-cta{
+    max-width: 286px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .arrow-links {
+    font-size: 16px;
+  }
+
   .card-title {
     min-height:auto;
   }
@@ -3273,6 +3319,10 @@ footer li a {
 /* because tablets */
 
 @media (min-width:1025px) {
+  img.logo {
+    width:100%;
+  }
+
   .container-main {
     max-width: 1290px;
   }
@@ -3304,6 +3354,7 @@ footer li a {
     height: 100%;
     z-index: -1;
     pointer-events: none;
+    overflow: hidden;
   }
 
   .banner-video-overlay {
@@ -3322,16 +3373,20 @@ footer li a {
     top: 50%;
     left: 50%;
     width: 100vw;
-    height: 100%;
-    min-height: 630px;
+    height: 56.25vw;
+    min-height: 100vh;
     min-width: 177.77vh;
     transform: translate(-50%, -50%);
   }
-}
 
-.banner-box {
-  position: relative;
-  top: 200px;
+  .banner-box {
+    max-width: 718px;
+    padding: 2.5rem 2.5rem 2.5rem 0;
+  }
+
+  .banner-text {
+    padding-right: 3rem;
+  }
 }
 
 .videoWrapper {
@@ -3420,17 +3475,9 @@ footer li a {
     align-items: center;
   }
 
-  .sm\:justify-end {
-    justify-content: flex-end;
-  }
-
   .sm\:mx-6 {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-  }
-
-  .sm\:ml-0 {
-    margin-left: 0;
   }
 
   .sm\:ml-8 {
@@ -3440,10 +3487,6 @@ footer li a {
   .sm\:py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .sm\:pl-4 {
-    padding-left: 1rem;
   }
 
   .sm\:w-1\/2 {
@@ -3738,6 +3781,10 @@ footer li a {
     flex-wrap: wrap;
   }
 
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+
   .lg\:items-center {
     align-items: center;
   }
@@ -3748,6 +3795,10 @@ footer li a {
 
   .lg\:flex-shrink-0 {
     flex-shrink: 0;
+  }
+
+  .lg\:h-full {
+    height: 100%;
   }
 
   .lg\:m-0 {
@@ -3762,6 +3813,11 @@ footer li a {
   .lg\:mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  .lg\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .lg\:mx-8 {
@@ -3798,6 +3854,10 @@ footer li a {
     margin-right: 0.5rem;
   }
 
+  .lg\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
   .lg\:ml-5 {
     margin-left: 1.25rem;
   }
@@ -3832,9 +3892,14 @@ footer li a {
     padding-right: 0.5rem;
   }
 
-  .lg\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .lg\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .lg\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .lg\:py-8 {
@@ -3842,12 +3907,12 @@ footer li a {
     padding-bottom: 2rem;
   }
 
-  .lg\:pr-4 {
-    padding-right: 1rem;
+  .lg\:pl-3 {
+    padding-left: 0.75rem;
   }
 
-  .lg\:pl-4 {
-    padding-left: 1rem;
+  .lg\:pr-4 {
+    padding-right: 1rem;
   }
 
   .lg\:text-left {
@@ -3973,6 +4038,10 @@ footer li a {
     flex-wrap: nowrap;
   }
 
+  .xl\:items-start {
+    align-items: flex-start;
+  }
+
   .xl\:items-stretch {
     align-items: stretch;
   }
@@ -3990,9 +4059,9 @@ footer li a {
     margin-bottom: 0;
   }
 
-  .xl\:mx-0 {
-    margin-left: 0;
-    margin-right: 0;
+  .xl\:my-12 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   .xl\:mt-0 {
@@ -4007,12 +4076,24 @@ footer li a {
     margin-left: 0;
   }
 
+  .xl\:mt-4 {
+    margin-top: 1rem;
+  }
+
   .xl\:ml-4 {
     margin-left: 1rem;
   }
 
+  .xl\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
   .xl\:ml-8 {
     margin-left: 2rem;
+  }
+
+  .xl\:mt-12 {
+    margin-top: 3rem;
   }
 
   .xl\:mr-auto {
@@ -4023,8 +4104,17 @@ footer li a {
     margin-left: auto;
   }
 
+  .xl\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .xl\:pl-0 {
     padding-left: 0;
+  }
+
+  .xl\:pl-4 {
+    padding-left: 1rem;
   }
 
   .xl\:pl-6 {
@@ -4057,6 +4147,10 @@ footer li a {
 
   .xl\:w-full {
     width: 100%;
+  }
+
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
