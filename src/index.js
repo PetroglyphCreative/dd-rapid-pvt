@@ -31,35 +31,44 @@ function component() {
 
   return element;
 }
-
-var drawer = new Vue({
-	el:'div.drawer',
-	data: {
-		d_showing:false
-	},
-	methods:{
-		toggledrawer: function(event){
-			this.d_showing = !this.d_showing;
-		}
+window.onload = function () {
+	let drawers = document.getElementsByClassName("drawer");	
+	console.log(drawers);
+	if(drawers.length > 0){
+		var drawer = new Vue({
+			el:'div.drawer',
+			data: {
+				d_showing:false
+			},
+			methods:{
+				toggledrawer: function(event){
+					this.d_showing = !this.d_showing;
+				}
+			}
+		});
 	}
-});
-var gallery = new Vue({
-	el: 'div#gallery',
-	data: {
-		//targetImg:document.querySelectorAll('#gallery > .thumb')[0].getAttribute('data-full'),
-		targetImg:document.querySelectorAll('div#gallery   img.thumb')[0].getAttribute('data-full'),
-		targetAlt:document.querySelectorAll('div#gallery   img.thumb')[0].getAttribute('alt')
-	
-	//	targetAlt:this.getElementsByClassName("main")[0].target.getAttribute('alt')
-	},
-	methods: {
-		selectImage: function(event){
-			//console.log(document.querySelectorAll('div#gallery   img.thumb')[0].getAttribute('data-full'));
-			this.targetImg = event.currentTarget.getAttribute('data-full');
-			this.targetAlt = event.currentTarget.getAttribute('alt');
-		},
+	let gallery_presence = document.getElementById("gallery");
+	if(typeof(gallery_presence) != 'undefined' && gallery_presence != null){
+		var gallery = new Vue({
+			
+			el: 'div#gallery',
+			data: {
+				//targetImg:document.querySelectorAll('#gallery > .thumb')[0].getAttribute('data-full'),
+				targetImg:document.querySelectorAll('div#gallery   img.thumb')[0].getAttribute('data-full'),
+				targetAlt:document.querySelectorAll('div#gallery   img.thumb')[0].getAttribute('alt')
+			
+			//	targetAlt:this.getElementsByClassName("main")[0].target.getAttribute('alt')
+			},
+			methods: {
+				selectImage: function(event){
+					//console.log(document.querySelectorAll('div#gallery   img.thumb')[0].getAttribute('data-full'));
+					this.targetImg = event.currentTarget.getAttribute('data-full');
+					this.targetAlt = event.currentTarget.getAttribute('alt');
+				},
+			}
+		});
 	}
-});
+}
 //navigation JS
 var thing = new Vue({
     el: 'header#pagehead',
