@@ -40,6 +40,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
 body{font-size: 16px; font-weight: 400; @apply bg-gray-100 font-body}
 a{ @apply text-gray-900 font-semibold;}
 hr {border-width:0;}
@@ -99,7 +100,7 @@ th{
 }
 .mark ul li {
   margin-right: .5rem;
-  margin-bottom: .85rem;
+  margin-bottom: .975rem;
 }
 .required {
   @apply text-red-500;
@@ -174,7 +175,7 @@ th{
   line-height: 24px;
   letter-spacing: .6pt;
   font-weight: 600;
-  @apply font-display;
+  @apply font-display uppercase;
 }
 .phone-text {
   font-size: 16px;
@@ -637,6 +638,12 @@ a.skip-main:focus, a.skip-main:active {
   margin-left: .65rem;
   font-size: 18px;
 }
+.blue-boxes {
+  @apply font-display;
+}
+.blue-boxes p {
+  margin: .05rem 0;
+}
 .careers p {
   padding: 0;
   margin: 0;
@@ -652,14 +659,14 @@ a.skip-main:focus, a.skip-main:active {
 .card img {
 	@apply w-full;
 }
-a .card h3, a .card h4 {
+.card h3, .card h4 {
   font-size: 18px;
   line-height: 20px;
   letter-spacing: .4pt;
 	@apply text-gray-900 font-display font-semibold uppercase;
 }
-a .card h5 {
-  font-size: 14px;
+.card h5 {
+  font-size: 16px;
   line-height: 18px;
   letter-spacing: .1pt;
   @apply text-green-500 font-body font-semibold;
@@ -688,7 +695,7 @@ blockquote footer{
 blockquote footer a {
  @apply not-italic;	
 }
-.quote {
+.quote, p.quote {
   font-style: normal;
   @apply font-display font-semibold;
 }
@@ -719,7 +726,7 @@ footer li a {
 }
 /* Timeline specific CSS */ 
 .timeline-title {
-  font-family: "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Proxima Nova", "proxima-nova", Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 1.1pt;
@@ -770,6 +777,7 @@ footer li a {
   text-transform: uppercase;
   white-space: nowrap;
   color: #0d559c;
+  @apply font-display;
 }
 
 /*----- TIMELINE MARKER -----*/

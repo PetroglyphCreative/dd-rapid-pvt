@@ -4,7 +4,7 @@ module.exports = {
 	  ],
   theme: {
 	fontFamily: {
-      'display': ['Proxima Nova', 'sans-serif'],
+      'display': ['Proxima Nova', 'proxima-nova', 'sans-serif'],
       'body': ['"Open Sans"', 'sans-serif'],
     },
     boxShadow: {

@@ -70,9 +70,8 @@
 
 	<!-- Homepage banner -->
 	<div class="flex mb-4">
-		<div class="w-full banner-home banner-video-wrapper flex items-center">
-			<div class="video-overlay"></div>
-			<!-- add &playlist=hnp1pt8biD4 (the latter part being the video id) to force it to loop -->
+		<div class="w-full banner-home banner-video-wrapper">
+			<div class="banner-video-overlay"></div>
 			<iframe src='https://player.vimeo.com/video/697143196?background=1&amp;autoplay=1&amp;loop=1&amp;byline=0&amp;title=0' frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 			<div class="flex sm:items-center justify-center xl:justify-end bg-blue-500 banner-box">
 				<div class="text-white banner-text">
@@ -86,20 +85,20 @@
 
 	<!-- Homepage heading section with specific page links -->
 	<div class="flex mark mb-4" id='main'>
-		<div class="w-full container-main mt-4 mb-8 mr-auto ml-auto">
-			<div class="w-5/6 mr-auto ml-auto flex flex-col lg:flex-row mt-12">
+		<div class="w-5/6 container-main mt-4 mb-8 mr-auto ml-auto">
+			<div class="w-full mr-auto ml-auto flex flex-col lg:flex-row mt-12">
 				<div class="w-full mr-auto ml-auto lg:w-3/5">
 					<h1 class="font-display heading-xs sm:page-heading uppercase text-gray-900 font-bold mb-5">Fire Protection Systems & Services</h1>
 					<p>From commerical and industrial projects to multi-family residential buildings, our certified fire protection specialists design, install, and service fire systems that protect lives and property.</p>
 				</div>
 				<div class="w-full lg:w-2/5 flex mr-auto ml-auto xl:ml-0">
 					<ul class="flex flex-col xl:flex-row lg:flex-wrap md:mt-6 lg:mt-2">
-						<li><a href="" class="btn-svc">Fire Suppression Systems</a></li>
-						<li><a href="" class="btn-svc">Design & Engineering</a></li>
-						<li><a href="" class="btn-svc">Fire Alarm & Security</a></li>
-						<li><a href="" class="btn-svc">AFFF Foam Replacement</a></li>
-						<li><a href="" class="btn-svc">Special Hazards</a></li>
-						<li><a href="" class="btn-svc">Service & Inspection</a></li>
+						<li><a href="#" class="btn-svc">Fire Suppression Systems</a></li>
+						<li><a href="#" class="btn-svc">Design & Engineering</a></li>
+						<li><a href="#" class="btn-svc">Fire Alarm & Security</a></li>
+						<li><a href="#" class="btn-svc">AFFF Foam Replacement</a></li>
+						<li><a href="#" class="btn-svc">Special Hazards</a></li>
+						<li><a href="#" class="btn-svc">Service & Inspection</a></li>
 					</ul>
 				</div>
 			</div>
@@ -108,7 +107,7 @@
 
 	<!-- Industries served image/link section -->
 	<div class="flex flex-col mb-4">
-		<div class="xl:w-full md:mx-4 container-main xl:mr-auto xl:ml-auto md:grid md:grid-cols-3 lg:grid-cols-4 auto-rows-fr gap-3 lg:gap-6">
+		<div class="w-5/6 xl:w-full container-main mr-auto ml-auto md:grid md:grid-cols-3 xl:grid-cols-4 auto-rows-fr gap-3 lg:gap-6">
 			<div class="md:bg-white ml-auto mr-auto">
 				<a href="#">
 					<div class="card h-full">
@@ -254,8 +253,8 @@
 				</a>
 			</div>
 		</div>
-		<div class="w-5/6 my-8 mx-4 sm:mx-6 container-main md:mr-auto md:ml-auto md:text-center">
-			<a href="" class="uppercase text-base">View All Industries <i class="fa fa-angle-right text-blue-500"></i></a>
+		<div class="w-5/6 lg:my-8 container-main mr-auto ml-auto text-center">
+			<a href="#" class="uppercase text-base">View All Industries <i class="fa fa-angle-right text-blue-500"></i></a>
 		</div>
 	</div>
 
@@ -269,7 +268,7 @@
 					<div class="md:pl-8">
 						<h4 class="heading-s">Setting the bar high for retrofit without operational disruption</h4>
 						<p>Rapid Fire Protection was chosen complete the highly complex retrofit of the Mercedes-Benz Stadium. Learn how our nationwide team of experts overcame the many challenges of this project.</p>
-						<a href="" class="uppercase text-base">Read More <i class="fa fa-angle-right text-blue-500"></i></a>
+						<a href="#" class="arrow-links">Read More <i class="fa fa-angle-right text-blue-500"></i></a>
 					</div>
 				</div>
 			</div>
@@ -280,7 +279,7 @@
 	<div class="flex bg-blue-500 cta-image w-full">
 		<div class="w-full xl:ml-auto xl:mr-auto container-main flex flex-col items-center justify-center text-center my-10 xl:my-0">
 			<h3 class="text-white cta-heading w-4/5 md:w-3/5 mb-4">Taking care of all your unique fire protection needs.</h3>
-			<a href="" class="btn-cta uppercase text-white">Request a quote <i class="fa fa-angle-right text-white hover:text-blue-500"></i></a>
+			<a href="#" class="btn-cta uppercase text-white">Request a quote <i class="fa fa-angle-right"></i></a>
 		</div>
 	</div>
 
@@ -291,17 +290,18 @@
 			<hr class="w-32 m-4 border-blue-500 border-2">
 			<p class="text-base w-4/5 sm:w-2/5">We are experiencing exceptional growth and seeking motivated and committed individuals to join our team!</p>
 			<div class="flex flex-col lg:flex-row job-container">
-				<a href="" class="job-btn">
+				<a href="#" class="job-btn">
 						<p class="heading-s font-semibold">Entry-level Estimator</p>
 						<p class="heading-xxs text-blue-500 uppercase">Rapid City, SD</p>
 				</a>
-				<a href="" class="job-btn">
+				<a href="#" class="job-btn">
 					<div>
 						<p class="heading-s font-semibold">Inspection Sales Representative</p>
 						<p class="heading-xxs text-blue-500 uppercase">Cheyenne, WY</p>
 					</div>
 				</a>
 			</div>
+			<a href="#" class="arrow-links mt-4">View All Openings <i class="fa fa-angle-right text-blue-500"></i></a>
 		</div>
 	</div>
 	
@@ -312,24 +312,24 @@
 				<div class="flex flex-col lg:flex-row w-full">
 					<div class="flex flex-col w-full lg:w-1/2">
 						<ul>
-							<li><a href="">Career Opportunities</a></li>
-							<li><a href="">Apprenticeship Program</a></li>
-							<li><a href="">News & Announcements</a></li>
-							<li><a href="">Services</a></li>
-							<li><a href="">Leadership</a></li>
-							<li><a href="">Contact Us</a></li>
-							<li><a href="">Acquisitions</a></li>
+							<li><a href="#">Career Opportunities</a></li>
+							<li><a href="#">Apprenticeship Program</a></li>
+							<li><a href="#">News & Announcements</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Leadership</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">Acquisitions</a></li>
 						</ul>
 					</div>
 					<div class="flex flex-col w-full lg:w-1/2">
 						<ul>
-							<li><a href="">About Us</a></li>
-							<li><a href="">Our People</a></li>
-							<li><a href="">Locations</a></li>
-							<li><a href="">Safety</a></li>
-							<li><a href="">Projects</a></li>
-							<li><a href="">Testimonials</a></li>
-							<li><a href="">Interested in Selling?</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Our People</a></li>
+							<li><a href="#">Locations</a></li>
+							<li><a href="#">Safety</a></li>
+							<li><a href="#">Projects</a></li>
+							<li><a href="#">Testimonials</a></li>
+							<li><a href="#">Interested in Selling?</a></li>
 						</ul>
 					</div>
 				</div>
@@ -347,19 +347,19 @@
 				<ul class="w-full md:grid md:grid-cols-2 md:auto-rows-fr md:gap-6 mt-4 states">
 					<li class="mb-8">
 						<h4 class="heading-s mb-2">South Dakota</h4>
-						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+						<a href="#" class="text-white arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Rapid City, SD</p>
 						<p class="phone-text"><i class="phone text-white"></i>(888) 348-2342</p>
 					</li>
 					<li class="mb-8">
 						<h4 class="heading-s mb-2">North Dakota</h4>
-						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+						<a href="#" class="text-white arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Bismarck, ND</p>
 						<p class="phone-text"><i class="phone text-white"></i>(701) 250-7037</p>
 					</li>
 					<li class="mb-8">
 						<h4 class="heading-s mb-2">Wyoming</h4>
-						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+						<a href="#" class="text-white arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Casper, WY</p>
 						<p class="phone-text"><i class="phone text-white"></i>(307) 439-4496</p>
 						<p class="mt-2">Cheyenne, WY</p>
@@ -367,13 +367,13 @@
 					</li>
 					<li class="mb-8">
 						<h4 class="heading-s mb-2">Colorado</h4>
-						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+						<a href="#" class="text-white arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Aurora, CO</p>
 						<p class="phone-text"><i class="phone text-white"></i>(720) 325-5696</p>
 					</li>
 					<li class="mb-8">
 						<h4 class="heading-s mb-2">Utah</h4>
-						<a href="" class="text-white uppercase arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
+						<a href="#" class="text-white arrow-links"><span class="border-b-1 border-white">View projects in this state</span><i class="fa fa-angle-right no-underline"></i></a>
 						<p class="mt-2">Salt Lake City, UT</p>
 						<p class="phone-text"><i class="phone text-white"></i>(801) 463-1621</p>
 					</li>
