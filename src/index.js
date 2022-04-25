@@ -32,8 +32,8 @@ function component() {
   return element;
 }
 window.onload = function () {
+	document.body.classList.remove("loading");
 	let drawers = document.getElementsByClassName("drawer");	
-	console.log(drawers);
 	if(drawers.length > 0){
 		var drawer = new Vue({
 			el:'div.drawer',
@@ -47,6 +47,7 @@ window.onload = function () {
 			}
 		});
 	}
+
 	let gallery_presence = document.getElementById("gallery");
 	if(typeof(gallery_presence) != 'undefined' && gallery_presence != null){
 		var gallery = new Vue({
@@ -67,6 +68,32 @@ window.onload = function () {
 				},
 			}
 		});
+	}
+		
+	let slider_presence = document.getElementById("sliderGallery");
+	if(typeof(slider_presence) != 'undefined' && gallery_presence != null){
+		let slides = document.getElementsByClassName("slider__slide");
+		let currentSlide = 0;
+		document.querySelector('.slidergallery a.next').addEventListener("click", (event) => {
+			event.preventDefault();
+			changeSlide(currentSlide + 1)
+		});
+		document.querySelector(".slidergallery a.prev").addEventListener("click", (event) => {
+			event.preventDefault();
+			changeSlide(currentSlide - 1)
+		});
+		function changeSlide(moveTo) {
+			if (moveTo >= slides.length) {moveTo = 0;}
+			if (moveTo < 0) {moveTo = slides.length - 1;}
+			console.log(moveTo);
+			slides[currentSlide].classList.toggle("active");
+		
+			slides[moveTo].classList.toggle("active");
+		
+			
+			currentSlide = moveTo;
+		}
+		
 	}
 }
 //navigation JS

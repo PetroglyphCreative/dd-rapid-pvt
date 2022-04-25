@@ -68,6 +68,8 @@ module.exports = {
   output: {
 	  filename:'[name].js',
     path: path.resolve(__dirname, 'public')
+    //path: path.resolve(__dirname, '../deploy/nwdp/public/assets/webpack') // <-local for Craft on NW's system
+    //path: path.resolve(__dirname, '../deploy/public/assets/webpack') // <- local for Craft on Caroline's system
   },
   devServer: {
 	  watchContentBase: true,

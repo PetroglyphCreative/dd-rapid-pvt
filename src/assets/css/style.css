@@ -51,6 +51,7 @@ th{
 .show-for-large-flex {
   display:none;
 }
+/* Meeting 3 - value 505 */
 .banner-home {
   background: 
   linear-gradient(
@@ -121,11 +122,71 @@ th{
     rgba(0, 44, 88, .65),
     rgba(0, 44, 88, .65)
     ),
-    url('../img/location-banner.jpg');
+    url('../img/location-banner.jpg');12
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 190px;
+}
+.slidergallery {
+ display:flex;
+ align-items:center;
+ justify-content:center
+
+}
+.slidergallery .slider {
+  display: block;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 10px;
+    background-color: #F6F6F6;
+    overflow: hidden;
+}
+.slidergallery .slider__slides {
+  width: 100%;
+  padding-top: 72%;
+}
+.slidergallery figure{
+  display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F6F6F6;
+    transition: 1s;
+    opacity: 0;
+
+
+}
+.slidergallery figure.active {
+  opacity: 1;
+}
+.tabgallery figure figcaption {
+  height:70px;
+  @apply text-gray-700 italic;
+}
+
+.slidergallery a.prev, .slidergallery a.next{
+  position:absolute;
+  z-index:10;
+  font-size: 20px;
+  background-color:#fff;  
+  padding:0 .5rem  ;
+ 
+}
+.slidergallery a.prev {
+  top: 42%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.slidergallery a.next{
+  top: 42%;
+  right: 0;
+  transform: translateY(-50%);
 }
 .gallery {
   margin: 2rem auto 0;
@@ -329,12 +390,13 @@ button.btn-lg{
 a.btn-cta {
   @apply block;
 }
+/* Meeting 6  */
 .btn-svc{
   font-size: 18px;
-  line-height: 32px;
+  line-height: 36px;
   letter-spacing: .1pt;
   border-width: 1px;
-  @apply font-display font-semibold py-2 px-4 bg-white text-green-500 border-green-500;
+  @apply font-display font-semibold py-2 px-4 bg-white text-green-500 border-green-500 mb-2; 
 }
 .btn-svc:hover{
   @apply bg-green-500 text-white;
@@ -360,6 +422,11 @@ a.btn-cta {
 .job-container a {
   margin-bottom: 1rem;
 }
+/* Meeting 8 */
+.blu {
+  font-size:16px;
+  line-height:32px;
+}
 .breadcrumb{
   font-size:12px;
   letter-spacing: .35pt;
@@ -383,6 +450,7 @@ a.btn-cta {
   @apply text-blue-500 border-none;
 }
 .menu-text {
+  font-size:15px;
   @apply text-gray-900;
 }
 .menu-text:hover {
@@ -495,12 +563,14 @@ header  nav a{ /* #  differentiate from sitewide nav if needed */
 header nav .vertical-menu a {
 	@apply text-large py-2 my-2;
 }
+/* Meeting 1 */
 .menu-toggle {
   display: inline-block;
   cursor: pointer;
   float:right;
-  @apply border rounded px-2 py-1;
+  @apply border rounded px-2 py-1; 
 }
+/* Meeting 2 */
 img.logo {width:85%; max-width:250px;}
 .bar1, .bar2, .bar3 {
   width: 30px;
@@ -998,6 +1068,9 @@ footer li a {
     max-width: 286px;
     @apply my-4;
   }
+  .blu {
+    @apply heading-xxs;
+  }
   .arrow-links {
     font-size: 16px;
   }
@@ -1040,8 +1113,10 @@ footer li a {
     background-repeat: no-repeat;
     min-height: 434px;
   }
+  /* Value: 630px */
   .banner-home {
     background: none;
+    /* min-height:auto; <--- must re-add value at this breakpoint */
   }
   .banner-video-wrapper {
     position: relative;
