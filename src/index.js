@@ -71,7 +71,7 @@ window.onload = function () {
 	}
 		
 	let slider_presence = document.getElementById("sliderGallery");
-	if(typeof(slider_presence) != 'undefined' && gallery_presence != null){
+	if(typeof(slider_presence) != 'undefined' && slider_presence != null){
 		let slides = document.getElementsByClassName("slider__slide");
 		let currentSlide = 0;
 		document.querySelector('.slidergallery a.next').addEventListener("click", (event) => {

@@ -680,6 +680,12 @@ video {
   }
 }
 
+.space-y-1 > :not(template) ~ :not(template) {
+  --space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--space-y-reverse));
+}
+
 .bg-white {
   --bg-opacity: 1;
   background-color: #fff;
@@ -974,6 +980,12 @@ video {
   border-color: rgba(208, 208, 208, var(--border-opacity));
 }
 
+.border-gray-400 {
+  --border-opacity: 1;
+  border-color: #b3b3b3;
+  border-color: rgba(179, 179, 179, var(--border-opacity));
+}
+
 .border-gray-500 {
   --border-opacity: 1;
   border-color: #999999;
@@ -1042,10 +1054,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-col-reverse {
-  flex-direction: column-reverse;
 }
 
 .flex-wrap {
@@ -1292,6 +1300,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.ml-8 {
+  margin-left: 2rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -1322,6 +1334,10 @@ video {
 
 .max-w-2xl {
   max-width: 42rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-2 {
@@ -1738,6 +1754,8 @@ th{
   display:none;
 }
 
+/* Meeting 3 - value 505 */
+
 .banner-home {
   background: 
   linear-gradient(
@@ -1824,10 +1842,78 @@ th{
     rgba(0, 44, 88, .65)
     ),
     url(assets/img/location-banner.jpg);
+  12
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 190px;
+}
+
+.slidergallery {
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+
+.slidergallery .slider {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 10px;
+  background-color: #F6F6F6;
+  overflow: hidden;
+}
+
+.slidergallery .slider__slides {
+  width: 100%;
+  padding-top: 72%;
+}
+
+.slidergallery figure{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F6F6F6;
+  transition: 1s;
+  opacity: 0;
+}
+
+.slidergallery figure.active {
+  opacity: 1;
+}
+
+.tabgallery figure figcaption {
+  height:70px;
+  --text-opacity: 1;
+  color: #666666;
+  color: rgba(102, 102, 102, var(--text-opacity));
+  font-style: italic;
+}
+
+.slidergallery a.prev, .slidergallery a.next{
+  position:absolute;
+  z-index:10;
+  font-size: 20px;
+  background-color:#fff;
+  padding:0 .5rem  ;
+}
+
+.slidergallery a.prev {
+  top: 42%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.slidergallery a.next{
+  top: 42%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .gallery {
@@ -2128,9 +2214,11 @@ a.btn-cta {
   display: block;
 }
 
+/* Meeting 6  */
+
 .btn-svc{
   font-size: 18px;
-  line-height: 32px;
+  line-height: 36px;
   letter-spacing: .1pt;
   border-width: 1px;
   font-family: Proxima Nova, proxima-nova, sans-serif;
@@ -2148,6 +2236,7 @@ a.btn-cta {
   --border-opacity: 1;
   border-color: #06a350;
   border-color: rgba(6, 163, 80, var(--border-opacity));
+  margin-bottom: 0.5rem;
 }
 
 .btn-svc:hover{
@@ -2191,6 +2280,13 @@ a.btn-cta {
 
 .job-container a {
   margin-bottom: 1rem;
+}
+
+/* Meeting 8 */
+
+.blu {
+  font-size:16px;
+  line-height:32px;
 }
 
 .breadcrumb{
@@ -2241,6 +2337,7 @@ a.btn-cta {
 }
 
 .menu-text {
+  font-size:15px;
   --text-opacity: 1;
   color: #2D2D2D;
   color: rgba(45, 45, 45, var(--text-opacity));
@@ -2589,6 +2686,8 @@ header nav .vertical-menu a {
   margin-bottom: 0.5rem;
 }
 
+/* Meeting 1 */
+
 .menu-toggle {
   display: inline-block;
   cursor: pointer;
@@ -2600,6 +2699,8 @@ header nav .vertical-menu a {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
+
+/* Meeting 2 */
 
 img.logo {
   width:85%; max-width:250px;
@@ -3287,6 +3388,14 @@ footer li a {
     margin-bottom: 1rem;
   }
 
+  .blu {
+    font-size:18px;
+    line-height:20px;
+    letter-spacing: .6pt;
+    font-weight:500;
+    font-family: Proxima Nova, proxima-nova, sans-serif;
+  }
+
   .arrow-links {
     font-size: 16px;
   }
@@ -3343,8 +3452,11 @@ footer li a {
     min-height: 434px;
   }
 
+  /* Value: 630px */
+
   .banner-home {
     background: none;
+    /* min-height:auto; <--- must re-add value at this breakpoint */
   }
 
   .banner-video-wrapper {
@@ -3757,6 +3869,10 @@ footer li a {
     }
   }
 
+  .lg\:border-0 {
+    border-width: 0;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -3771,6 +3887,10 @@ footer li a {
 
   .lg\:flex-col {
     flex-direction: column;
+  }
+
+  .lg\:flex-col-reverse {
+    flex-direction: column-reverse;
   }
 
   .lg\:flex-wrap {
@@ -3804,6 +3924,11 @@ footer li a {
   .lg\:mx-0 {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .lg\:my-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .lg\:mx-4 {
@@ -3854,8 +3979,20 @@ footer li a {
     margin-top: 0.75rem;
   }
 
+  .lg\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .lg\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .lg\:ml-5 {
     margin-left: 1.25rem;
+  }
+
+  .lg\:mt-12 {
+    margin-top: 3rem;
   }
 
   .lg\:mb-12 {
@@ -3896,6 +4033,11 @@ footer li a {
   .lg\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .lg\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .lg\:py-8 {
